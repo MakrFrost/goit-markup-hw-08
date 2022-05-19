@@ -457,6 +457,7 @@
             </ul>
           </address>
         </div>
+        <!--Добавляет ссылки на соц.сети-->
         <div class="footer-social">
           <p class="social-title">присоединяйтесь</p>
           <ul class="social-list">
@@ -510,18 +511,17 @@
             </li>
           </ul>
         </div>
-        <div class="footer-form">
-          <form action="">
-            <label>
-              Interest rate:
-              <input type="range" name="interest_rate" value="40" min="0" max="100" step="20" />
-            </label>
-            <label for="">
-              Email
-              <input type="email" autofocus placeholder="например"
-            /></label>
-          </form>
-        </div>
+        <!--Добавляет форму ввода в футере-->
+        <form class="footer-form" name="form-footer" autocomplete="on">
+          <label class="form-title">Подпишитесь на рассылку</label>
+          <input type="email" name="email" placeholder="E-mail" />
+          <button class="footer-button" type="submit">
+            Подписаться
+            <svg class="footer-send" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <!-- Модальное окно -->
