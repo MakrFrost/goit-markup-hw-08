@@ -1065,7 +1065,7 @@ body {
 }
 
 .form-label {
-  margin-bottom: 5px;
+  position: relative;
 
   font-size: 12px;
   line-height: 1.1;
@@ -1087,18 +1087,12 @@ body {
   padding-left: 42px;
 }
 
-.modal-icon-container {
-  position: relative;
-
-  margin-bottom: 10px;
-}
-
 .modal-icon-input {
   position: absolute;
   top: 0;
   left: 12px;
 
-  transform: translate(0%, -5%);
+  transform: translate(0%, 150%);
 }
 
 .form-textarea {
@@ -1122,8 +1116,8 @@ body {
 
   margin-bottom: 30px;
 
-  font-size: 12px;
-  line-height: 1.1;
+  font-size: 14px;
+  line-height: 1;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
@@ -1135,6 +1129,8 @@ body {
 }
 
 .check-link {
+  margin-left: 3px;
+
   color: var(--accent-color);
 }
 
@@ -1142,9 +1138,7 @@ body {
   display: flex;
   margin-right: auto;
   margin-left: auto;
-
-  width: 200px;
-  height: 50px;
+  padding: 10px 56px;
 
   justify-content: center;
 }
