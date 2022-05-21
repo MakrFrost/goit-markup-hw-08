@@ -1041,6 +1041,11 @@ body {
 /* Добавляет стили для формы в модальном окне */
 /* Убирает бордер внутри инпута outline: none; */
 
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal-title {
   margin: 0 0 12px 0;
 
@@ -1065,6 +1070,8 @@ body {
 }
 
 .form-label {
+  margin-bottom: 10px;
+
   position: relative;
 
   font-size: 12px;
@@ -1085,6 +1092,7 @@ body {
 
   padding: 11px 11px;
   padding-left: 42px;
+  margin-top: 4px;
 }
 
 .modal-icon-input {
@@ -1141,4 +1149,21 @@ body {
   padding: 10px 56px;
 
   justify-content: center;
+
+  color: var(--color-white);
+  background-color: var(--accent-color);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
