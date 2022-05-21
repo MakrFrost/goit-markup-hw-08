@@ -225,7 +225,6 @@ body {
 
 .button:hover,
 .button:focus {
-  color: var(--color-white);
   background-color: #188ce8;
   cursor: pointer;
 }
@@ -1046,6 +1045,15 @@ body {
   flex-direction: column;
 }
 
+.modal-input:focus {
+  outline: 0;
+  border-color: var(--accent-color);
+}
+
+.modal-input:focus + .modal-icon-input {
+  fill: var(--accent-color);
+}
+
 .modal-title {
   margin: 0 0 12px 0;
 
@@ -1093,6 +1101,8 @@ body {
   padding: 11px 11px;
   padding-left: 42px;
   margin-top: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-input {
@@ -1101,6 +1111,8 @@ body {
   left: 12px;
 
   transform: translate(0%, 150%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea {
@@ -1112,6 +1124,8 @@ body {
 
   border: 1px solid #21212120;
   border-radius: 4px;
+
+  resize: none;
 }
 
 .modal-checkbox {
@@ -1164,6 +1178,12 @@ body {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-send:hover,
+.modal-send:active {
+  background-color: #188ce8;
 }
