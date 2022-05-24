@@ -534,17 +534,17 @@ body {
   margin: 0;
 }
 
-.client-item {
+.client-list__item {
   margin-right: 30px;
 
   list-style: none;
 }
 
-.client-item:last-child {
+.client-list__item:last-child {
   margin-right: 0;
 }
 
-.client-link {
+.client-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -562,14 +562,14 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover,
-.client-link:active,
-.client-link:focus {
+.client-list__link:hover,
+.client-list__link:active,
+.client-list__link:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 
-.client-logo {
+.client-list__logo {
   fill: currentColor;
 }
 
@@ -582,13 +582,17 @@ body {
   background-color: var(--bcg-color);
 }
 
-.flex-footer {
+.footer-flex {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
 }
 
-.logo-footer {
+.container-footer {
+  margin-right: 70px;
+}
+
+.footer-logo {
   display: block;
   margin-bottom: 30px;
 
@@ -601,25 +605,32 @@ body {
   line-height: 1.2;
 }
 
+.footer-logo__second {
+  color: var(--accent-color);
+}
+
+/* Блок контакты в футере */
+
 .footer-list {
   display: block;
   margin: 0;
   padding-left: 0;
 }
 
-.footer-address {
+.footer-list__item {
   margin-bottom: 9px;
-
-  color: var(--color-white);
   list-style-type: none;
 }
 
-.link-address {
-  margin-bottom: 9px;
+.footer-list__item:last-child {
+  margin-bottom: 0;
+}
 
+.footer-list__address {
   color: var(--color-white);
-  text-decoration: none;
 
+  margin-bottom: 9px;
+  text-decoration: none;
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
@@ -627,20 +638,29 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-address:hover,
-.link-address:focus {
+.footer-list__address:hover,
+.footer-list__address:focus {
   color: var(--accent-color);
 }
 
-.footer-item {
+.footer-list__source {
+  color: var(--second-text-color);
+
   margin-bottom: 9px;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
 
-  list-style-type: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-item:last-child {
-  margin-bottom: 0;
+.footer-list__source:hover,
+.footer-list__source:focus {
+  color: var(--accent-color);
 }
+
+/* Край блока Контакты в футере */
 
 .footer-link {
   color: #ffffffa6;
@@ -656,10 +676,6 @@ body {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
-}
-
-.container-footer {
-  margin-right: 70px;
 }
 
 .footer-social {
