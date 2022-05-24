@@ -662,28 +662,14 @@ body {
 
 /* Край блока Контакты в футере */
 
-.footer-link {
-  color: #ffffffa6;
-  text-decoration: none;
-
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.7;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--accent-color);
-}
+/* Блок социальных сетей в футере */
 
 .footer-social {
   display: block;
   margin-right: 93px;
 }
 
-.social-title {
+.footer-social__title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -695,7 +681,7 @@ body {
   margin-bottom: 20px;
 }
 
-.social-list {
+.footer-social__list {
   display: flex;
   justify-content: space-around;
 
@@ -704,16 +690,16 @@ body {
   list-style-type: none;
 }
 
-.social-item {
+.footer-social__item {
   margin-right: 10px;
   padding: 0;
 }
 
-.social-item:last-child {
+.footer-social__item:last-child {
   margin-right: 0px;
 }
 
-.link-footer {
+.footer-social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -728,15 +714,17 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-footer:hover,
-.link-footer:active,
-.link-footer:focus {
+.footer-social__link:hover,
+.footer-social__link:active,
+.footer-social__link:focus {
   background-color: var(--accent-color);
 }
 
+/* Край блока социальных сетей в футере */
+
 /* Добавляет стили для формы ввода в футере */
 
-.form-title {
+.footer-form__title {
   display: block;
   margin-bottom: 20px;
 
@@ -748,7 +736,7 @@ body {
   color: #ffffff;
 }
 
-.footer-form input {
+.footer-form__input {
   height: 50px;
   width: 358px;
 
@@ -763,7 +751,7 @@ body {
   outline: none;
 }
 
-.footer-form input::placeholder {
+.footer-form__input::placeholder {
   font-size: 16px;
   line-height: 1;
   display: flex;
@@ -773,7 +761,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-button {
+.footer-form__button {
   margin: 0;
   padding: 10px 0px;
 
@@ -797,19 +785,28 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-button:hover,
-.footer-button:focus {
+.footer-form__button:hover,
+.footer-form__button:focus {
   color: var(--color-white);
   background-color: #188ce8;
   cursor: pointer;
 }
 
-.footer-send {
+.footer-form__icon {
   margin: 0;
   margin-left: 10px;
 }
 
 /* Добавляет основные стили для файла portfolio.html */
+
+/* Блок-контейнер для отступа */
+
+.works {
+  padding-bottom: 94px;
+
+  background-color: var(--color-white);
+}
+
 /* Добавляет стили для раздела "фильтры для поиска" */
 
 .filtres {
@@ -825,16 +822,16 @@ body {
   padding-left: 0px;
 }
 
-.filtres-item {
+.filtres-list .filtres-list__item:last-child {
+  margin-right: 0px;
+}
+
+.filtres-list__item {
   margin-right: 8px;
   list-style-type: none;
 }
 
-.filtres-list .filtres-item:last-child {
-  margin-right: 0px;
-}
-
-.filtres-button {
+.filtres-list__button {
   display: inline-block;
   border: 0;
   border-radius: 4px;
@@ -855,8 +852,8 @@ body {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filtres-button:hover,
-.filtres-button:focus {
+.filtres-list__button:hover,
+.filtres-list__button:focus {
   color: var(--color-white);
   background-color: #188ce8;
   cursor: pointer;
@@ -864,13 +861,9 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Добавляет стили для раздела "работы" */
+/* Край блока кнопок */
 
-.works {
-  padding-bottom: 94px;
-
-  background-color: var(--color-white);
-}
+/* Добавляет элементы для раздела "работы" */
 
 .works-list {
   display: flex;
@@ -880,7 +873,7 @@ body {
   margin-top: 0;
 }
 
-.works-item {
+.works-list__item {
   list-style-type: none;
   width: 370px;
   margin-right: 30px;
