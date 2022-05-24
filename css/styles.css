@@ -9,7 +9,8 @@
   --bcg-img-color: #f5f4fa;
   --icon-color: #afb1b8;
   --bcg-color-hero: #2f303a40;
-
+  /* Цвет для кнопки при ховере */
+  --button-hover: #188ce8;
   /* Добавляет переменную анимации */
   --animation-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -232,7 +233,7 @@ body {
 
 .button:hover,
 .button:focus {
-  background-color: #188ce8;
+  background-color: var(--button-hover);
   cursor: pointer;
 }
 
@@ -790,7 +791,7 @@ body {
 .footer-form__button:hover,
 .footer-form__button:focus {
   color: var(--color-white);
-  background-color: #188ce8;
+  background-color: var(--button-hover);
   cursor: pointer;
 }
 
@@ -948,7 +949,7 @@ body {
   color: var(--second-text-color);
 }
 
-.modal-form__in {
+.modal-form__feedback {
   width: 450px;
   height: 120px;
 
@@ -960,6 +961,12 @@ body {
 
   resize: none;
   outline: none;
+
+  transition: border-color var(--animation-main);
+}
+
+.modal-form__feedback:focus {
+  border-color: var(--accent-color);
 }
 
 /* Стили для чекбокса */
@@ -1050,7 +1057,7 @@ body {
 
 .modal-send:hover,
 .modal-send:active {
-  background-color: #188ce8;
+  background-color: var(--button-hover);
 }
 
 /* Добавляет основные стили для файла portfolio.html */
@@ -1109,7 +1116,7 @@ body {
 .filtres-list__button:hover,
 .filtres-list__button:focus {
   color: var(--color-white);
-  background-color: #188ce8;
+  background-color: var(--button-hover);
   cursor: pointer;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
