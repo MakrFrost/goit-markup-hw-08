@@ -603,26 +603,27 @@
           <label class="modal-form__textarea"
             >Комментарий
             <textarea
-              class="modal-form__textarea"
+              class="modal-form__in"
               rows="5"
               name="comment"
               placeholder="Введите текст"
             ></textarea>
           </label>
 
-          <span class="modal-checkbox">
-            <label class="form-label-check">
-              <input class="label-check" type="checkbox" value="checkbox" name="check" />
+          <span class="modal-form__checkbox">
+            <label class="modal-form__check">
+              <input class="modal-form__box" type="checkbox" value="checkbox" name="check" />
 
-              <svg class="icon-checkbox">
+              <svg class="modal-form__icon-checkbox">
                 <use href="./images/icons.svg#checkbox"></use>
               </svg>
 
-              Соглашаюсь с рассылкой и принимаю <a href="#" class="check-link"> Условия договора</a>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="#" class="modal-form__link"> Условия договора</a>
             </label>
           </span>
 
-          <button type="submit" class="modal-send">Отправить</button>
+          <button class="modal-send" type="submit">Отправить</button>
         </form>
       </div>
     </div>
