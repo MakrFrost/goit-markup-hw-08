@@ -11,7 +11,7 @@
   --bcg-color-hero: #2f303a40;
 }
 
-/* Добавляет стили для тега body */
+/* Добавляет/делает сброс стилей для тега body */
 
 body {
   margin: 0;
@@ -23,6 +23,7 @@ body {
 }
 
 /* Ограничивающий контейнер */
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -170,7 +171,7 @@ body {
   margin-right: 10px;
 }
 
-/* Добавляет стили для класса hero */
+/* Добавляет стили для hero блока */
 
 .hero {
   background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)),
@@ -249,12 +250,12 @@ body {
   justify-content: space-between;
 }
 
-.feature-item {
+.feature-list__item {
   width: 270px;
   list-style-type: none;
 }
 
-.feature-item::before {
+.feature-list__item::before {
   content: '';
   background-color: var(--bcg-img-color);
   background-repeat: no-repeat;
@@ -266,29 +267,25 @@ body {
   margin-bottom: 30px;
 }
 
-.antenna::before {
+.feature-list__antenna::before {
   background-image: url(../images/index/antenna.png);
 }
 
-.clock::before {
+.feature-list__clock::before {
   background-image: url(../images/index/clock.png);
 }
 
-.diagram::before {
+.feature-list__diagram::before {
   background-image: url(../images/index/diagram.png);
 }
 
-.astronaut::before {
+.feature-list__astronaut::before {
   background-image: url(../images/index/astronaut.png);
 }
 
-.feature-item h3 {
+.feature-list__title {
   margin-top: 0;
   margin-bottom: 10px;
-}
-
-.feature-title {
-  margin-top: 0;
 
   color: var(--first-text-color);
 
@@ -299,7 +296,7 @@ body {
   text-transform: uppercase;
 }
 
-.feature-text {
+.feature-list__text {
   margin-bottom: 0;
   margin-top: 0;
 
