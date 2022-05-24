@@ -20,7 +20,6 @@
   </head>
   <body>
     <!-- Шапка -->
-
     <header class="header">
       <div class="container header-nav">
         <nav class="header-nav">
@@ -57,7 +56,7 @@
         </ul>
       </div>
     </header>
-
+    <!-- Край Шапки -->
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -459,6 +458,7 @@
     <!-- Подвал -->
     <footer class="footer">
       <div class="container footer-flex">
+        <!-- Блок линков -->
         <div class="container-footer">
           <a href="./index.html" class="footer-logo"
             ><span class="footer-logo__second">Web</span>Studio</a
@@ -483,8 +483,9 @@
             </ul>
           </address>
         </div>
+        <!-- Край блока линков -->
 
-        <!--Блок ссылок на соц.сети-->
+        <!-- Блок ссылок на соц.сети -->
         <div class="footer-social">
           <p class="footer-social__title">присоединяйтесь</p>
           <ul class="footer-social__list">
@@ -538,9 +539,9 @@
             </li>
           </ul>
         </div>
-        <!--Край блока ссылок-->
+        <!-- Край блока ссылок -->
 
-        <!--Добавляет форму ввода в футере-->
+        <!-- Добавляет форму ввода в футере -->
         <form class="footer-form" name="form-footer" autocomplete="on">
           <label class="footer-form__title">Подпишитесь на рассылку</label>
           <input class="footer-form__input" type="email" name="email" placeholder="E-mail" />
@@ -551,49 +552,58 @@
             </svg>
           </button>
         </form>
-        <!--Край формы ввода-->
+        <!-- Край формы ввода -->
       </div>
     </footer>
     <!-- Край подвала -->
 
     <!-- Модальное окно -->
+
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
+        <!-- Кнопка закрытия модального окна -->
+
         <button data-modal-close class="modal-button" type="button">
-          <svg class="modal-icon" width="11" height="11">
+          <svg width="11" height="11">
             <use href="./images/icons.svg#close-btn"></use>
           </svg>
         </button>
+
+        <!-- Заголовок модалки -->
+
         <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
+
+        <!-- Форма ввода модалки -->
+
         <form class="modal-form" name="modal-form" autocomplete="on">
-          <label class="form-label"
+          <label class="modal-form__label"
             >Имя
-            <input type="text" name="text" class="modal-input" required />
-            <svg class="modal-icon-input" width="18" height="18">
+            <input class="modal-form__input" type="text" name="text" required />
+            <svg class="modal-form__icon" width="18" height="18">
               <use href="./images/icons.svg#person-black"></use>
             </svg>
           </label>
 
-          <label class="form-label"
+          <label class="modal-form__label"
             >Телефон
-            <input type="tel" name="tel" class="modal-input" required />
-            <svg class="modal-icon-input" width="18" height="18">
+            <input class="modal-form__input" type="tel" name="tel" required />
+            <svg class="modal-form__icon" width="18" height="18">
               <use href="./images/icons.svg#phone-old"></use>
             </svg>
           </label>
 
-          <label class="form-label">
+          <label class="modal-form__label">
             Почта
-            <input type="email" name="email" class="modal-input" required />
-            <svg class="modal-icon-input" width="18" height="18">
+            <input class="modal-form__input" type="email" name="email" required />
+            <svg class="modal-form__icon" width="18" height="18">
               <use href="./images/icons.svg#sms"></use>
             </svg>
           </label>
 
-          <label class="form-label-textarea"
+          <label class="modal-form__textarea"
             >Комментарий
             <textarea
-              class="form-textarea"
+              class="modal-form__textarea"
               rows="5"
               name="comment"
               placeholder="Введите текст"
@@ -617,6 +627,7 @@
       </div>
     </div>
     <!-- Край Модального окна -->
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

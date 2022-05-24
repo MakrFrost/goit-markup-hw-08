@@ -981,7 +981,7 @@ body {
 
 /* Край блока карточек */
 
-/*Добавляет стили для модального окна*/
+/* Добавляет стили для cкрытия модального окна */
 
 .backdrop {
   position: fixed;
@@ -1002,6 +1002,12 @@ body {
   visibility: hidden;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Добавляет общие стили для модального окна */
+
 .modal {
   position: absolute;
   top: 50%;
@@ -1018,10 +1024,6 @@ body {
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal-button {
@@ -1053,20 +1055,6 @@ body {
 /* Добавляет стили для формы в модальном окне */
 /* Убирает бордер внутри инпута outline: none; */
 
-.modal-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-input:focus {
-  outline: 0;
-  border-color: var(--accent-color);
-}
-
-.modal-input:focus + .modal-icon-input {
-  fill: var(--accent-color);
-}
-
 .modal-title {
   margin: 0 0 12px 0;
 
@@ -1079,18 +1067,12 @@ body {
   color: var(--first-text-color);
 }
 
-.modal-list {
-  list-style: none;
-
+.modal-form {
   display: flex;
-  margin-bottom: 10px;
+  flex-direction: column;
 }
 
-.modal-item {
-  display: flex;
-}
-
-.form-label {
+.modal-form__label {
   margin-bottom: 10px;
 
   position: relative;
@@ -1098,10 +1080,11 @@ body {
   font-size: 12px;
   line-height: 1.1;
   letter-spacing: 0.01em;
+
   color: var(--second-text-color);
 }
 
-.modal-input {
+.modal-form__input {
   height: 40px;
   width: 100%;
 
@@ -1117,18 +1100,41 @@ body {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-icon-input {
+.modal-form__icon {
   position: absolute;
+
   top: 0;
   left: 12px;
 
   transform: translate(0%, 165%);
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-textarea {
+/* Подсветка свг иконки при фокусе инпута */
+
+.modal-form__input:focus {
+  outline: 0;
+  border-color: var(--accent-color);
+}
+
+.modal-form__input:focus + .modal-form__icon {
+  fill: var(--accent-color);
+}
+
+/* Стили для поля ввода текста */
+
+.modal-form__textarea {
+  margin-bottom: 20px;
+
+  position: relative;
+
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+
+.modal-form__textarea {
   width: 450px;
   height: 120px;
 
@@ -1142,16 +1148,7 @@ body {
   outline: none;
 }
 
-.form-label-textarea {
-  margin-bottom: 20px;
-
-  position: relative;
-
-  font-size: 12px;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  color: var(--second-text-color);
-}
+/* Стили для чекбокса */
 
 .modal-checkbox {
   margin-bottom: 30px;
@@ -1167,11 +1164,47 @@ body {
   color: var(--second-text-color);
 }
 
+.label-check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 1px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-checkbox {
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .check-link {
   margin-left: 3px;
 
   color: var(--accent-color);
 }
+
+.label-check:checked + .icon-checkbox {
+  background-origin: border-box;
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+.label-check:focus + .icon-checkbox {
+  border-color: var(--accent-color);
+}
+
+/* Кнопка для отправки информации */
 
 .modal-send {
   display: flex;
@@ -1203,38 +1236,4 @@ body {
 .modal-send:hover,
 .modal-send:active {
   background-color: #188ce8;
-}
-
-.label-check {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 1px;
-  padding: 0px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.icon-checkbox {
-  width: 16px;
-  height: 15px;
-
-  margin-right: 8px;
-
-  border: 2px solid #212121;
-  border-radius: 2px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.label-check:checked + .icon-checkbox {
-  background-origin: border-box;
-  background-color: var(--accent-color);
-  border-color: transparent;
-}
-
-.label-check:focus + .icon-checkbox {
-  border-color: var(--accent-color);
 }
