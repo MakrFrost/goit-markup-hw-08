@@ -14,20 +14,20 @@
   color: var(--color-white);
 
   text-align: center;
-}
 
-.hero-title {
-  margin: 0;
-  display: block;
+  &-title {
+    margin: 0;
+    display: block;
 
-  color: var(--color-white);
+    color: var(--color-white);
 
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  align-items: center;
-  text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* Добавляет стили для кнопки */
@@ -52,12 +52,10 @@
   border-radius: 4px;
 
   transition: background-color var(--animation-main);
-}
 
-.button:hover,
-.button:focus {
-  background-color: var(--button-hover);
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover);
+    cursor: pointer;
+  }
 }
-
-/* Край оформления кнопки */

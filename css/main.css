@@ -158,7 +158,6 @@ body {
   color: var(--color-white);
   text-align: center;
 }
-
 .hero-title {
   margin: 0;
   display: block;
@@ -189,14 +188,11 @@ body {
   border-radius: 4px;
   transition: background-color var(--animation-main);
 }
-
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background-color: var(--button-hover);
   cursor: pointer;
 }
 
-/* Край оформления кнопки */
 /* Добавляет стили для раздела "особенности" */
 .feature {
   padding-top: 94px;
