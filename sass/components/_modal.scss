@@ -16,220 +16,225 @@
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform var(--animation-main);
-}
 
-.modal-button {
-  cursor: pointer;
+  /* Заголовок модального окна */
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
+  &-title {
+    margin: 0 0 12px 0;
 
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
 
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
+    color: var(--first-text-color);
+  }
 
-  transition: fill var(--animation-main);
-}
+  /* Кнопка закрытия модального окна */
 
-.modal-button:hover,
-.modal-button:focus {
-  fill: var(--accent-color);
+  &-button {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition: fill var(--animation-main);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  /* Кнопка для отправки информации в модальном окне */
+
+  &-send {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 56px;
+
+    justify-content: center;
+
+    color: var(--color-white);
+    background-color: var(--accent-color);
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color var(--animation-main);
+
+    &:hover,
+    &:active {
+      background-color: var(--button-hover);
+    }
+  }
 }
 
 /* Добавляет стили для формы в модальном окне */
 
-.modal-title {
-  margin: 0 0 12px 0;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--first-text-color);
-}
-
 .modal-form {
   display: flex;
   flex-direction: column;
-}
 
-.modal-form__label {
-  margin-bottom: 10px;
+  &__label {
+    margin-bottom: 10px;
 
-  position: relative;
+    position: relative;
 
-  font-size: 12px;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
 
-  color: var(--second-text-color);
-}
+    color: var(--second-text-color);
+  }
 
-.modal-form__input {
-  height: 40px;
-  width: 100%;
+  &__input {
+    height: 40px;
+    width: 100%;
 
-  border: 1px solid;
-  border-color: #21212120;
-  border-radius: 4px;
+    border: 1px solid;
+    border-color: #21212120;
+    border-radius: 4px;
 
-  outline: none;
+    outline: none;
 
-  padding: 11px 11px;
-  padding-left: 42px;
-  margin-top: 4px;
+    padding: 11px 11px;
+    padding-left: 42px;
+    margin-top: 4px;
 
-  transition: border-color var(--animation-main);
-}
-.modal-form__icon {
-  position: absolute;
+    transition: border-color var(--animation-main);
 
-  top: 0;
-  left: 12px;
+    /* Утилита подсветки свг иконки при фокусе инпута */
 
-  transform: translate(0%, 165%);
-  transition: fill var(--animation-main);
-}
+    &:focus {
+      outline: 0;
+      border-color: var(--accent-color);
+    }
 
-/* Утилита подсветки свг иконки при фокусе инпута */
+    &:focus + .modal-form__icon {
+      fill: var(--accent-color);
+    }
+  }
 
-.modal-form__input:focus {
-  outline: 0;
-  border-color: var(--accent-color);
-}
+  &__icon {
+    position: absolute;
 
-.modal-form__input:focus + .modal-form__icon {
-  fill: var(--accent-color);
-}
+    top: 0;
+    left: 12px;
 
-/* Стили для поля ввода текста */
+    transform: translate(0%, 165%);
+    transition: fill var(--animation-main);
+  }
 
-.modal-form__textarea {
-  margin-bottom: 20px;
+  /* Стили для поля ввода текста */
 
-  font-size: 12px;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  color: var(--second-text-color);
-}
+  &__textarea {
+    margin-bottom: 20px;
 
-.modal-form__feedback {
-  width: 450px;
-  height: 120px;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: var(--second-text-color);
+  }
 
-  padding: 12px 16px;
-  margin-top: 4px;
+  &__feedback {
+    width: 450px;
+    height: 120px;
 
-  border: 1px solid #21212120;
-  border-radius: 4px;
+    padding: 12px 16px;
+    margin-top: 4px;
 
-  resize: none;
-  outline: none;
+    border: 1px solid #21212120;
+    border-radius: 4px;
 
-  transition: border-color var(--animation-main);
-}
+    resize: none;
+    outline: none;
 
-.modal-form__feedback:focus {
-  border-color: var(--accent-color);
-}
+    transition: border-color var(--animation-main);
 
-/* Стили для чекбокса */
+    &:focus {
+      border-color: var(--accent-color);
+    }
+  }
 
-.modal-form__checkbox {
-  margin-bottom: 30px;
-}
+  /* Стили для чекбокса */
 
-.modal-form__check {
-  display: flex;
-  justify-content: center;
+  &__checkbox {
+    margin-bottom: 30px;
+  }
 
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
-}
+  &__check {
+    display: flex;
+    justify-content: center;
 
-.modal-form__box {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 1px;
-  padding: 0px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+  }
 
-.modal-form__icon-checkbox {
-  width: 16px;
-  height: 15px;
+  &__box {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 1px;
+    padding: 0px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 
-  margin-right: 8px;
+  &__icon-checkbox {
+    width: 16px;
+    height: 15px;
 
-  border: 2px solid #212121;
-  border-radius: 2px;
+    margin-right: 8px;
 
-  transition: background-color var(--animation-main), border-color var(--animation-main);
-}
+    border: 2px solid #212121;
+    border-radius: 2px;
 
-.modal-form__link {
-  margin-left: 3px;
+    transition: background-color var(--animation-main), border-color var(--animation-main);
 
-  color: var(--accent-color);
-}
+    /* Добавляет кастомную иконку для чекбокса при чекеде и фокусе */
 
-/* Добавляет кастомную иконку для чекбокса при чекеде и фокусе */
+    .modal-form__box:checked + & {
+      background-origin: border-box;
+      background-color: var(--accent-color);
+      border-color: transparent;
+    }
 
-.modal-form__box:checked + .modal-form__icon-checkbox {
-  background-origin: border-box;
-  background-color: var(--accent-color);
-  border-color: transparent;
-}
+    .modal-form__box:focus + & {
+      border-color: var(--accent-color);
+    }
+  }
 
-.modal-form__box:focus + .modal-form__icon-checkbox {
-  border-color: var(--accent-color);
-}
+  &__link {
+    margin-left: 3px;
 
-/* Кнопка для отправки информации в модальном окне */
-
-.modal-send {
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 10px 56px;
-
-  justify-content: center;
-
-  color: var(--color-white);
-  background-color: var(--accent-color);
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-
-  transition: background-color var(--animation-main);
-}
-
-.modal-send:hover,
-.modal-send:active {
-  background-color: var(--button-hover);
+    color: var(--accent-color);
+  }
 }

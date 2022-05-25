@@ -48,21 +48,21 @@
     line-height: 1.7;
     letter-spacing: 0.03em;
   }
-}
 
-.feature-list__item {
-  width: 270px;
-  list-style-type: none;
-
-  &::before {
-    content: '';
-    background-color: var(--bcg-img-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70px 70px;
-    display: block;
+  &__item {
     width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
+    list-style-type: none;
+
+    &::before {
+      content: '';
+      background-color: var(--bcg-img-color);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70px 70px;
+      display: block;
+      width: 270px;
+      height: 120px;
+      margin-bottom: 30px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .filtres {
   padding-top: 94px;
-  margin-bottom: 34px;
+  padding-bottom: 94px;
 }
 
 .filtres-list {
@@ -9,44 +9,42 @@
   display: flex;
   justify-content: center;
   padding-left: 0px;
+
+  &__item {
+    margin-right: 8px;
+    list-style-type: none;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px 22px;
+
+    color: var(--first-text-color);
+    background-color: #f5f4fa;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    transition: color var(--animation-main), background-color var(--animation-main),
+      box-shadow var(--animation-main);
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--button-hover);
+      cursor: pointer;
+
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
 }
-
-.filtres-list .filtres-list__item:last-child {
-  margin-right: 0px;
-}
-
-.filtres-list__item {
-  margin-right: 8px;
-  list-style-type: none;
-}
-
-.filtres-list__button {
-  display: inline-block;
-  border: 0;
-  border-radius: 4px;
-  padding: 6px 22px;
-
-  color: var(--first-text-color);
-  background-color: #f5f4fa;
-
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  transition: color var(--animation-main), background-color var(--animation-main),
-    box-shadow var(--animation-main);
-}
-
-.filtres-list__button:hover,
-.filtres-list__button:focus {
-  color: var(--color-white);
-  background-color: var(--button-hover);
-  cursor: pointer;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-/* Край блока кнопок */
