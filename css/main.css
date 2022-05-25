@@ -258,7 +258,6 @@ body {
   padding-top: 94px;
   background-color: var(--color-white);
 }
-
 .work-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -276,11 +275,9 @@ body {
   margin: 0;
   justify-content: space-between;
 }
-
 .work-list__item {
   list-style-type: none;
 }
-
 .work-list__img {
   position: relative;
   max-height: 294px;
@@ -288,7 +285,6 @@ body {
   max-width: 100%;
   height: auto;
 }
-
 .work-list__text {
   position: absolute;
   bottom: 0;
