@@ -43,43 +43,13 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/* Стили для логотипа */
-.header-nav__logo {
-  margin-right: 93px;
-  color: var(--color-black);
-  font-family: "Raleway", sans-serif;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+.header-nav__item {
+  margin-right: 50px;
+  position: relative;
 }
-.header-nav__logo-second {
-  color: var(--accent-color);
+.header-nav__item:last-child {
+  margin-right: 0;
 }
-
-.header-nav__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  display: flex;
-}
-
-.header-nav__list .header-nav__actual {
-  color: var(--accent-color);
-}
-.header-nav__list .header-nav__actual::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
-
 .header-nav__link {
   display: block;
   padding-top: 32px;
@@ -96,13 +66,39 @@ body {
   color: var(--accent-color);
   transition: color var(--animation-main);
 }
-
-.header-nav__item {
-  margin-right: 50px;
-  position: relative;
+.header-nav__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  display: flex;
 }
-.header-nav__item:last-child {
-  margin-right: 0;
+.header-nav__list .header-nav__actual {
+  color: var(--accent-color);
+}
+.header-nav__list .header-nav__actual::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Стили для логотипа */
+.header-nav__logo {
+  margin-right: 93px;
+  color: var(--color-black);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.header-nav__logo-second {
+  color: var(--accent-color);
 }
 
 /* ^ Край блока навигации ^ */
@@ -126,7 +122,6 @@ body {
   fill: currentColor;
   margin-right: 10px;
 }
-
 .header-list__link {
   display: flex;
   justify-content: center;
@@ -649,13 +644,11 @@ body {
   opacity: 1;
   transition: opacity var(--animation-main), visibility var(--animation-main);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
-
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }

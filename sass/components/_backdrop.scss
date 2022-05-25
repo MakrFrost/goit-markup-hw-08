@@ -10,14 +10,14 @@
 
   opacity: 1;
   transition: opacity var(--animation-main), visibility var(--animation-main);
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
 }

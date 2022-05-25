@@ -11,6 +11,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &__item {
+    margin-right: 50px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--first-text-color);
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color var(--animation-main);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      transition: color var(--animation-main);
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+  }
+
+  &__list &__actual {
+    color: var(--accent-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+  }
 }
 
 /* Стили для логотипа */
@@ -28,59 +82,6 @@
 
   &-second {
     color: var(--accent-color);
-  }
-}
-
-.header-nav__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  display: flex;
-}
-
-.header-nav__list .header-nav__actual {
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-  }
-  color: var(--accent-color);
-}
-
-.header-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: var(--first-text-color);
-  text-decoration: none;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  transition: color var(--animation-main);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    transition: color var(--animation-main);
-  }
-}
-
-.header-nav__item {
-  margin-right: 50px;
-  position: relative;
-
-  &:last-child {
-    margin-right: 0;
   }
 }
 
@@ -110,27 +111,27 @@
     fill: currentColor;
     margin-right: 10px;
   }
-}
 
-.header-list__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-  color: var(--second-text-color);
-  text-decoration: none;
+    color: var(--second-text-color);
+    text-decoration: none;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-  transition: color var(--animation-main);
+    transition: color var(--animation-main);
 
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
 }
