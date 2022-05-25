@@ -463,7 +463,6 @@ body {
   padding-bottom: 60px;
   background-color: var(--bcg-color);
 }
-
 .footer-flex {
   display: flex;
   align-items: baseline;
@@ -474,6 +473,7 @@ body {
   margin-right: 70px;
 }
 
+/* Логотип футера */
 .footer-logo {
   display: block;
   margin-bottom: 30px;
@@ -484,7 +484,6 @@ body {
   font-size: 26px;
   line-height: 1.2;
 }
-
 .footer-logo__second {
   color: var(--accent-color);
 }
@@ -494,17 +493,16 @@ body {
   display: block;
   margin: 0;
   padding-left: 0;
+  /* Блок адресов */
+  /* Блок информации для связи*/
 }
-
 .footer-list__item {
   margin-bottom: 9px;
   list-style-type: none;
 }
-
 .footer-list__item:last-child {
   margin-bottom: 0;
 }
-
 .footer-list__address {
   color: var(--color-white);
   margin-bottom: 9px;
@@ -514,12 +512,9 @@ body {
   line-height: 1.7;
   transition: color var(--animation-main);
 }
-
-.footer-list__address:hover,
-.footer-list__address:focus {
+.footer-list__address:hover, .footer-list__address:focus {
   color: var(--accent-color);
 }
-
 .footer-list__source {
   color: var(--second-text-color);
   margin-bottom: 9px;
@@ -529,9 +524,7 @@ body {
   line-height: 1.7;
   transition: color var(--animation-main);
 }
-
-.footer-list__source:hover,
-.footer-list__source:focus {
+.footer-list__source:hover, .footer-list__source:focus {
   color: var(--accent-color);
 }
 
@@ -540,8 +533,11 @@ body {
 .footer-social {
   display: block;
   margin-right: 93px;
+  /* Заголовок секции*/
+  /* Список */
+  /* Элементы списка */
+  /* Ссылки на соц. сети */
 }
-
 .footer-social__title {
   font-weight: bold;
   font-size: 14px;
@@ -552,7 +548,6 @@ body {
   margin: 0;
   margin-bottom: 20px;
 }
-
 .footer-social__list {
   display: flex;
   justify-content: space-around;
@@ -560,16 +555,13 @@ body {
   padding: 0;
   list-style-type: none;
 }
-
 .footer-social__item {
   margin-right: 10px;
   padding: 0;
 }
-
 .footer-social__item:last-child {
   margin-right: 0px;
 }
-
 .footer-social__link {
   display: flex;
   align-items: center;
@@ -581,10 +573,7 @@ body {
   fill: var(--color-white);
   transition: background-color var(--animation-main);
 }
-
-.footer-social__link:hover,
-.footer-social__link:active,
-.footer-social__link:focus {
+.footer-social__link:hover, .footer-social__link:active, .footer-social__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -600,7 +589,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
-
 .footer-form__input {
   height: 50px;
   width: 358px;
@@ -613,7 +601,6 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0823529412);
   outline: none;
 }
-
 .footer-form__input::placeholder {
   font-size: 16px;
   line-height: 1;
@@ -622,7 +609,6 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-form__button {
   margin: 0;
   padding: 10px 0px;
@@ -642,14 +628,11 @@ body {
   align-items: center;
   transition: background-color var(--animation-main);
 }
-
-.footer-form__button:hover,
-.footer-form__button:focus {
+.footer-form__button:hover, .footer-form__button:focus {
   color: var(--color-white);
   background-color: var(--button-hover);
   cursor: pointer;
 }
-
 .footer-form__icon {
   margin: 0;
   margin-left: 10px;
