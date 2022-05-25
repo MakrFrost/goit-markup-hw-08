@@ -1,3 +1,1222 @@
-p {
-  color: aliceblue;
-}/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+:root {
+  /* Добавляет основные цвета для стилизации контента */
+  --first-text-color: #212121;
+  --second-text-color: #757575;
+  --accent-color: #2196f3;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --bcg-color: #2f303a;
+  --bcg-img-color: #f5f4fa;
+  --icon-color: #afb1b8;
+  --bcg-color-hero: #2f303a40;
+  /* Цвет для кнопки при ховере */
+  --button-hover: #188ce8;
+  /* Добавляет переменную анимации */
+  --animation-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Добавляет/делает сброс стилей для тега body */
+body {
+  margin: 0;
+  color: var(--first-text-color);
+  background-color: var(--color-white);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Ограничивающий контейнер */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Добавляет стили для хедера*/
+.header {
+  border-bottom: 1px solid #ececec;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Начало блока навигации */
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Стили для логотипа */
+.header-nav__logo {
+  margin-right: 93px;
+  color: var(--color-black);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.header-nav__logo-second {
+  color: var(--accent-color);
+}
+
+.header-nav__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-nav__list .header-nav__actual {
+  color: var(--accent-color);
+}
+
+.header-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--first-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  -webkit-transition: color var(--animation-main);
+  transition: color var(--animation-main);
+}
+
+.header-nav__link:hover,
+.header-nav__link:focus {
+  color: var(--accent-color);
+  -webkit-transition: color var(--animation-main);
+  transition: color var(--animation-main);
+}
+
+.header-nav__item {
+  margin-right: 50px;
+}
+
+.header-nav__item:last-child {
+  margin-right: 0;
+}
+
+.header-nav__item {
+  position: relative;
+}
+
+.header-nav__item .header-nav__actual::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* ^ Край блока навигации ^ */
+/* Блок с адресом и телефоном */
+.header-list {
+  padding: 0;
+  margin: 0 0 0 auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.header-list__item {
+  padding-left: auto;
+  margin-right: 50px;
+}
+
+.header-list__item:last-child {
+  margin-right: 0px;
+}
+
+.header-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--second-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  -webkit-transition: color var(--animation-main);
+  transition: color var(--animation-main);
+}
+
+.header-list__link:hover,
+.header-list__link:focus {
+  color: var(--accent-color);
+}
+
+/* Иконки */
+.header-list__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+/* Добавляет стили для hero блока */
+.hero {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--bcg-color-hero)), to(var(--bcg-color-hero))), url(../images/index/team-work.jpg);
+  background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)), url(../images/index/team-work.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.hero-title {
+  margin: 0;
+  display: block;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+/* Добавляет стили для кнопки */
+.button {
+  padding: 10px 32px;
+  margin-top: 30px;
+  color: var(--color-white);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-transition: background-color var(--animation-main);
+  transition: background-color var(--animation-main);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+
+/* Край оформления кнопки */
+/* Добавляет стили для раздела "особенности" */
+.feature {
+  padding-top: 94px;
+  background-color: var(--color-white);
+}
+
+.feature-list {
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feature-list__item {
+  width: 270px;
+  list-style-type: none;
+}
+
+.feature-list__item::before {
+  content: "";
+  background-color: var(--bcg-img-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.feature-list__antenna::before {
+  background-image: url(../images/index/antenna.png);
+}
+
+.feature-list__clock::before {
+  background-image: url(../images/index/clock.png);
+}
+
+.feature-list__diagram::before {
+  background-image: url(../images/index/diagram.png);
+}
+
+.feature-list__astronaut::before {
+  background-image: url(../images/index/astronaut.png);
+}
+
+.feature-list__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--first-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.feature-list__text {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: var(--second-text-color);
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+/* Добавляет стили для раздела "чем занимаемся" */
+.work {
+  padding-bottom: 94px;
+  padding-top: 94px;
+  background-color: var(--color-white);
+}
+
+.work-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.work-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.work-list__item {
+  list-style-type: none;
+}
+
+.work-list__img {
+  position: relative;
+  max-height: 294px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.work-list__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 370px;
+  height: 70px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--color-white);
+}
+
+/* Добавляет стили для раздела "наша команда" */
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+}
+
+.team-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  color: var(--first-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding-left: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team-list__items {
+  list-style-type: none;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list__img {
+  margin-bottom: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.team-list__wrap {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--color-white);
+}
+
+.team-list__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--first-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-list__text {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--second-text-color);
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Блок ссылок на социальные сети */
+.team-list__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.team-list__icon-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+.team-list__icon-item:last-child {
+  margin-right: 0px;
+}
+
+.team-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  fill: var(--icon-color);
+  -webkit-transition: fill var(--animation-main), background-color var(--animation-main), border-radius var(--animation-main), color var(--animation-main);
+  transition: fill var(--animation-main), background-color var(--animation-main), border-radius var(--animation-main), color var(--animation-main);
+}
+
+.team-list__link:hover,
+.team-list__link:active,
+.team-list__link:focus {
+  border-radius: 50%;
+  fill: var(--color-white);
+  background: var(--accent-color);
+}
+
+.team-list__link:last-child {
+  margin-right: 0px;
+}
+
+.team-list__social {
+  display: block;
+}
+
+/* Добавляет стили для секции "Постоянные клиенты" */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-text-color);
+}
+
+.client-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.client-list__item {
+  margin-right: 30px;
+  list-style: none;
+}
+
+.client-list__item:last-child {
+  margin-right: 0;
+}
+
+.client-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  color: var(--icon-color);
+  -webkit-transition: color var(--animation-main), border var(--animation-main);
+  transition: color var(--animation-main), border var(--animation-main);
+}
+
+.client-list__link:hover,
+.client-list__link:active,
+.client-list__link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.client-list__logo {
+  fill: currentColor;
+}
+
+/* Добавляет стили для тега footer */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--bcg-color);
+}
+
+.footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container-footer {
+  margin-right: 70px;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--color-white);
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.footer-logo__second {
+  color: var(--accent-color);
+}
+
+/* Блок контакты в футере */
+.footer-list {
+  display: block;
+  margin: 0;
+  padding-left: 0;
+}
+
+.footer-list__item {
+  margin-bottom: 9px;
+  list-style-type: none;
+}
+
+.footer-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-list__address {
+  color: var(--color-white);
+  margin-bottom: 9px;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  -webkit-transition: color var(--animation-main);
+  transition: color var(--animation-main);
+}
+
+.footer-list__address:hover,
+.footer-list__address:focus {
+  color: var(--accent-color);
+}
+
+.footer-list__source {
+  color: var(--second-text-color);
+  margin-bottom: 9px;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  -webkit-transition: color var(--animation-main);
+  transition: color var(--animation-main);
+}
+
+.footer-list__source:hover,
+.footer-list__source:focus {
+  color: var(--accent-color);
+}
+
+/* Край блока Контакты в футере */
+/* Блок социальных сетей в футере */
+.footer-social {
+  display: block;
+  margin-right: 93px;
+}
+
+.footer-social__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.footer-social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-social__item {
+  margin-right: 10px;
+  padding: 0;
+}
+
+.footer-social__item:last-child {
+  margin-right: 0px;
+}
+
+.footer-social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--color-white);
+  -webkit-transition: background-color var(--animation-main);
+  transition: background-color var(--animation-main);
+}
+
+.footer-social__link:hover,
+.footer-social__link:active,
+.footer-social__link:focus {
+  background-color: var(--accent-color);
+}
+
+/* Край блока социальных сетей в футере */
+/* Добавляет стили для формы ввода в футере */
+.footer-form__title {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-form__input {
+  height: 50px;
+  width: 358px;
+  padding: 15px;
+  margin: 0 12px 0 0;
+  background-color: #2f303a;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0823529412);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0823529412);
+  outline: none;
+}
+
+.footer-form__input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__input::placeholder {
+  font-size: 16px;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__button {
+  margin: 0;
+  padding: 10px 0px;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1450980392);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1450980392);
+  background-color: var(--accent-color);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color var(--animation-main);
+  transition: background-color var(--animation-main);
+}
+
+.footer-form__button:hover,
+.footer-form__button:focus {
+  color: var(--color-white);
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+
+.footer-form__icon {
+  margin: 0;
+  margin-left: 10px;
+}
+
+/* Добавляет стили для cкрытия модального окна */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity var(--animation-main), visibility var(--animation-main);
+  transition: opacity var(--animation-main), visibility var(--animation-main);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Добавляет общие стили для модального окна */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform var(--animation-main);
+  transition: -webkit-transform var(--animation-main);
+  transition: transform var(--animation-main);
+  transition: transform var(--animation-main), -webkit-transform var(--animation-main);
+}
+
+.modal-button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  -webkit-transition: fill var(--animation-main);
+  transition: fill var(--animation-main);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  fill: var(--accent-color);
+}
+
+/* Добавляет стили для формы в модальном окне */
+.modal-title {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--first-text-color);
+}
+
+.modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-form__label {
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+
+.modal-form__input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.1254901961);
+  border-radius: 4px;
+  outline: none;
+  padding: 11px 11px;
+  padding-left: 42px;
+  margin-top: 4px;
+  -webkit-transition: border-color var(--animation-main);
+  transition: border-color var(--animation-main);
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  -webkit-transform: translate(0%, 165%);
+          transform: translate(0%, 165%);
+  -webkit-transition: fill var(--animation-main);
+  transition: fill var(--animation-main);
+}
+
+/* Утилита подсветки свг иконки при фокусе инпута */
+.modal-form__input:focus {
+  outline: 0;
+  border-color: var(--accent-color);
+}
+
+.modal-form__input:focus + .modal-form__icon {
+  fill: var(--accent-color);
+}
+
+/* Стили для поля ввода текста */
+.modal-form__textarea {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+
+.modal-form__feedback {
+  width: 450px;
+  height: 120px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.1254901961);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  -webkit-transition: border-color var(--animation-main);
+  transition: border-color var(--animation-main);
+}
+
+.modal-form__feedback:focus {
+  border-color: var(--accent-color);
+}
+
+/* Стили для чекбокса */
+.modal-form__checkbox {
+  margin-bottom: 30px;
+}
+
+.modal-form__check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+.modal-form__box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 1px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form__icon-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  -webkit-transition: background-color var(--animation-main), border-color var(--animation-main);
+  transition: background-color var(--animation-main), border-color var(--animation-main);
+}
+
+.modal-form__link {
+  margin-left: 3px;
+  color: var(--accent-color);
+}
+
+/* Добавляет кастомную иконку для чекбокса при чекеде и фокусе */
+.modal-form__box:checked + .modal-form__icon-checkbox {
+  background-origin: border-box;
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+.modal-form__box:focus + .modal-form__icon-checkbox {
+  border-color: var(--accent-color);
+}
+
+/* Кнопка для отправки информации в модальном окне */
+.modal-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 56px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-white);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: background-color var(--animation-main);
+  transition: background-color var(--animation-main);
+}
+
+.modal-send:hover,
+.modal-send:active {
+  background-color: var(--button-hover);
+}
+
+/* Добавляет основные стили для файла portfolio.html */
+/* Блок-контейнер для отступа */
+.works {
+  padding-bottom: 94px;
+  background-color: var(--color-white);
+}
+
+.filtres {
+  padding-top: 94px;
+  margin-bottom: 34px;
+}
+
+.filtres-list {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0px;
+}
+
+.filtres-list .filtres-list__item:last-child {
+  margin-right: 0px;
+}
+
+.filtres-list__item {
+  margin-right: 8px;
+  list-style-type: none;
+}
+
+.filtres-list__button {
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 22px;
+  color: var(--first-text-color);
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  -webkit-transition: color var(--animation-main), background-color var(--animation-main), -webkit-box-shadow var(--animation-main);
+  transition: color var(--animation-main), background-color var(--animation-main), -webkit-box-shadow var(--animation-main);
+  transition: color var(--animation-main), background-color var(--animation-main), box-shadow var(--animation-main);
+  transition: color var(--animation-main), background-color var(--animation-main), box-shadow var(--animation-main), -webkit-box-shadow var(--animation-main);
+}
+
+.filtres-list__button:hover,
+.filtres-list__button:focus {
+  color: var(--color-white);
+  background-color: var(--button-hover);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Край блока кнопок */
+.filtres {
+  padding-top: 94px;
+  margin-bottom: 34px;
+}
+
+.filtres-list {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0px;
+}
+
+.filtres-list .filtres-list__item:last-child {
+  margin-right: 0px;
+}
+
+.filtres-list__item {
+  margin-right: 8px;
+  list-style-type: none;
+}
+
+.filtres-list__button {
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 22px;
+  color: var(--first-text-color);
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  -webkit-transition: color var(--animation-main), background-color var(--animation-main), -webkit-box-shadow var(--animation-main);
+  transition: color var(--animation-main), background-color var(--animation-main), -webkit-box-shadow var(--animation-main);
+  transition: color var(--animation-main), background-color var(--animation-main), box-shadow var(--animation-main);
+  transition: color var(--animation-main), background-color var(--animation-main), box-shadow var(--animation-main), -webkit-box-shadow var(--animation-main);
+}
+
+.filtres-list__button:hover,
+.filtres-list__button:focus {
+  color: var(--color-white);
+  background-color: var(--button-hover);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Край блока кнопок *//*# sourceMappingURL=main.css.map */

@@ -1,0 +1,16 @@
+:root {
+  /* Добавляет основные цвета для стилизации контента */
+  --first-text-color: #212121;
+  --second-text-color: #757575;
+  --accent-color: #2196f3;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --bcg-color: #2f303a;
+  --bcg-img-color: #f5f4fa;
+  --icon-color: #afb1b8;
+  --bcg-color-hero: #2f303a40;
+  /* Цвет для кнопки при ховере */
+  --button-hover: #188ce8;
+  /* Добавляет переменную анимации */
+  --animation-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
