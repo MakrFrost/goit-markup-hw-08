@@ -1,5 +1,4 @@
 /* Добавляет стили для хедера*/
-
 .header {
   border-bottom: 1px solid #ececec;
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -25,10 +24,10 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-}
 
-.header-nav__logo-second {
-  color: var(--accent-color);
+  &-second {
+    color: var(--accent-color);
+  }
 }
 
 .header-nav__list {
@@ -40,6 +39,16 @@
 }
 
 .header-nav__list .header-nav__actual {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
   color: var(--accent-color);
 }
 
@@ -57,35 +66,21 @@
   letter-spacing: 0.02em;
 
   transition: color var(--animation-main);
-}
 
-.header-nav__link:hover,
-.header-nav__link:focus {
-  color: var(--accent-color);
-  transition: color var(--animation-main);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transition: color var(--animation-main);
+  }
 }
 
 .header-nav__item {
   margin-right: 50px;
-}
-
-.header-nav__item:last-child {
-  margin-right: 0;
-}
-
-.header-nav__item {
   position: relative;
-}
 
-.header-nav__item .header-nav__actual::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 /* ^ Край блока навигации ^ */
@@ -98,15 +93,22 @@
   list-style: none;
   display: flex;
   justify-content: end;
-}
 
-.header-list__item {
-  padding-left: auto;
-  margin-right: 50px;
-}
+  &__item {
+    padding-left: auto;
+    margin-right: 50px;
+  }
 
-.header-list__item:last-child {
-  margin-right: 0px;
+  &__item:last-child {
+    margin-right: 0px;
+  }
+
+  /* Иконки */
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
 }
 
 .header-list__link {
@@ -125,16 +127,9 @@
   letter-spacing: 0.02em;
 
   transition: color var(--animation-main);
-}
 
-.header-list__link:hover,
-.header-list__link:focus {
-  color: var(--accent-color);
-}
-
-/* Иконки */
-
-.header-list__icon {
-  fill: currentColor;
-  margin-right: 10px;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
