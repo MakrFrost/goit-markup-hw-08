@@ -205,40 +205,18 @@ body {
   margin: 0;
   justify-content: space-between;
 }
-
-.feature-list__item {
-  width: 270px;
-  list-style-type: none;
-}
-
-.feature-list__item::before {
-  content: "";
-  background-color: var(--bcg-img-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px 70px;
-  display: block;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-}
-
 .feature-list__antenna::before {
   background-image: url(../images/index/antenna.png);
 }
-
 .feature-list__clock::before {
   background-image: url(../images/index/clock.png);
 }
-
 .feature-list__diagram::before {
   background-image: url(../images/index/diagram.png);
 }
-
 .feature-list__astronaut::before {
   background-image: url(../images/index/astronaut.png);
 }
-
 .feature-list__title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -249,7 +227,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .feature-list__text {
   margin-bottom: 0;
   margin-top: 0;
@@ -257,6 +234,22 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+
+.feature-list__item {
+  width: 270px;
+  list-style-type: none;
+}
+.feature-list__item::before {
+  content: "";
+  background-color: var(--bcg-img-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
 }
 
 /* Добавляет стили для раздела "чем занимаемся" */
