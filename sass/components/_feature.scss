@@ -3,11 +3,13 @@
 @media screen and (max-width: 480px) {
   .feature {
     padding-top: 60px;
+    padding-bottom: 60px;
 
     background-color: var(--color-white);
   }
 
   .feature-list {
+    margin: 0;
     padding-left: 0px;
 
     &__antenna::before {
@@ -42,7 +44,6 @@
       margin-top: 0;
 
       color: var(--second-text-color);
-
       font-size: 14px;
       line-height: 1.7;
       letter-spacing: 0.03em;
