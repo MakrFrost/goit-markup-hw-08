@@ -1,5 +1,17 @@
 /* Добавляет стили для раздела "чем занимаемся" */
 
+/*Добавляет адаптив*/
+
+@media screen and (max-width: 480px) {
+  .work {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 1200px) {
+}
+
 .work {
   padding-bottom: 94px;
   padding-top: 94px;

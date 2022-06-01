@@ -30,15 +30,33 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
 
 /* Добавляет стили для хедера*/
+@media screen and (max-width: 480px) {
+  .header-nav__logo {
+    display: block;
+    padding: 16px 0;
+  }
+
+  .header-nav__list {
+    display: none;
+  }
+
+  .header-list {
+    display: none;
+  }
+}
 .header {
   border-bottom: 1px solid #ececec;
 }
 
 /* Начало блока навигации */
 .header-nav {
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -70,7 +88,6 @@ body {
   padding: 0;
   margin: 0;
   justify-content: center;
-  display: flex;
 }
 .header-nav__list .header-nav__actual {
   color: var(--accent-color);
@@ -106,7 +123,6 @@ body {
   padding: 0;
   margin: 0 0 0 auto;
   list-style: none;
-  display: flex;
   justify-content: end;
   /* Иконки */
 }
@@ -122,7 +138,6 @@ body {
   margin-right: 10px;
 }
 .header-list__link {
-  display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 32px;
@@ -140,53 +155,59 @@ body {
 }
 
 /* Добавляет стили для hero блока */
-.hero {
-  background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)), url(../images/index/team-work.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  color: var(--color-white);
-  text-align: center;
-}
-.hero-title {
-  margin: 0;
-  display: block;
-  color: var(--color-white);
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  align-items: center;
-  text-align: center;
-}
+@media screen and (max-width: 480px) {
+  .hero {
+    background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)), url(../images/index/team-work.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-white);
+    text-align: center;
+    max-width: 480px;
+    max-height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 
-/* Добавляет стили для кнопки */
-.button {
-  padding: 10px 32px;
-  margin-top: 30px;
-  color: var(--color-white);
-  background-color: var(--accent-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  transition: background-color var(--animation-main);
-}
-.button:hover, .button:focus {
-  background-color: var(--button-hover);
-  cursor: pointer;
-}
+  .hero-title {
+    margin: 0;
+    display: block;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.4;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    line-height: 42px;
+  }
 
+  .button {
+    padding: 10px 32px;
+    margin-top: 30px;
+    color: var(--color-white);
+    background-color: var(--accent-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background-color var(--animation-main);
+  }
+  .button:hover, .button:focus {
+    background-color: var(--button-hover);
+    cursor: pointer;
+  }
+}
 /* Добавляет стили для раздела "особенности" */
 .feature {
   padding-top: 94px;
@@ -246,6 +267,12 @@ body {
 }
 
 /* Добавляет стили для раздела "чем занимаемся" */
+/*Добавляет адаптив*/
+@media screen and (max-width: 480px) {
+  .work {
+    display: none;
+  }
+}
 .work {
   padding-bottom: 94px;
   padding-top: 94px;

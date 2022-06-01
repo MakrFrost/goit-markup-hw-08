@@ -6,6 +6,11 @@
 /* 480px, 768px і 1200px. */
 
 @media screen and (max-width: 480px) {
+  /* CONTAINER */
+  .container {
+    width: 480px;
+  }
+  /* HEADER */
   .header-nav__logo {
     display: block;
     padding: 16px 0;
@@ -15,6 +20,17 @@
   }
   .header-list {
     display: none;
+  }
+  /* END HEADER */
+  /* HERO START */
+  .hero {
+    max-width: 480px;
+    max-height: 400px;
+  }
+  .hero-title {
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
   }
   .work {
     display: none;
@@ -55,8 +71,8 @@ body {
 /* Ограничивающий контейнер */
 
 .container {
-  width: 1200px;
-  /* margin: 0 auto; */
+  /* width: 1200px; */
+  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -212,8 +228,8 @@ body {
   max-width: 1600px;
   /* margin-left: auto; */
   /* margin-right: auto; */
-  padding-top: 200px;
-  padding-bottom: 200px;
+  /* padding-top: 200px; */
+  /* padding-bottom: 200px; */
   color: var(--color-white);
 
   text-align: center;
@@ -227,7 +243,7 @@ body {
 
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 44px;
+  /* font-size: 44px; */
   line-height: 1.4;
   align-items: center;
   text-align: center;

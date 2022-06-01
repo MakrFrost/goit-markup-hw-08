@@ -1,5 +1,24 @@
 /* Добавляет стили для хедера*/
 
+@media screen and (max-width: 480px) {
+  .header-nav__logo {
+    display: block;
+    padding: 16px 0;
+  }
+
+  .header-nav__list {
+    display: none;
+  }
+
+  .header-list {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 1200px) {
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -7,7 +26,7 @@
 /* Начало блока навигации */
 
 .header-nav {
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
 
@@ -47,7 +66,7 @@
     padding: 0;
     margin: 0;
     justify-content: center;
-    display: flex;
+    // display: flex;
   }
 
   &__list &__actual {
@@ -92,7 +111,7 @@
   padding: 0;
   margin: 0 0 0 auto;
   list-style: none;
-  display: flex;
+  // display: flex;
   justify-content: end;
 
   &__item {
@@ -112,7 +131,7 @@
   }
 
   &__link {
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 32px;
