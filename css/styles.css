@@ -6,16 +6,23 @@
 /* 480px, 768px і 1200px. */
 
 @media screen and (max-width: 480px) {
-  .header {
+  .header-nav__logo {
+    display: block;
+    padding: 16px 0;
+  }
+  .header-nav__list {
+    display: none;
+  }
+  .header-list {
+    display: none;
+  }
+  .work {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .header {
-  }
 }
 @media screen and (max-width: 1200px) {
-  .header {
-  }
 }
 
 :root {
