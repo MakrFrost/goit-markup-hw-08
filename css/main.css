@@ -97,8 +97,8 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 480px;
-  height: 100vh;
+  max-width: 480px;
+  height: 796px;
   background-color: white;
   opacity: 0;
   visibility: hidden;
