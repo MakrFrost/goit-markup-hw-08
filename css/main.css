@@ -36,9 +36,23 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
+.header-brg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.header-brg:hover .header-brg__icon {
+  fill: var(--accent-color);
+}
 
 /* Начало блока навигации */
 .header-nav {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -436,8 +450,6 @@ body {
 }
 .client-list__link {
   display: block;
-  justify-content: center;
-  align-items: center;
   padding: 16px 52px;
   width: 210px;
   height: 92px;

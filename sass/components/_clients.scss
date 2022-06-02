@@ -21,8 +21,6 @@
 .client-list {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
 
   padding: 0;
   margin: 0;
@@ -44,9 +42,6 @@
 
   &__link {
     display: block;
-    // display: flex;
-    justify-content: center;
-    align-items: center;
 
     padding: 16px 52px;
 

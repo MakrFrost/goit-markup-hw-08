@@ -2,12 +2,29 @@
 
 .header {
   border-bottom: 1px solid #ececec;
+
+  &-brg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background-color: white;
+    cursor: pointer;
+
+    &:hover .header-brg__icon {
+      fill: var(--accent-color);
+    }
+  }
 }
 
 /* Начало блока навигации */
 
 .header-nav {
-  // display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
