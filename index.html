@@ -26,23 +26,25 @@
     <!-- Шапка -->
     <header class="header">
       <div class="container header-nav">
-        <nav class="header-nav">
-          <a href="./index.html" class="header-nav__logo"
-            ><span class="header-nav__logo-second">Web</span>Studio</a
-          >
-          <!-- Кнопка открытия мобильного меню -->
-          <button class="header-brg" data-menu-open>
-            <svg class="header-brg__icon" width="24" height="16">
-              <use href="./images/icons.svg#brg-menu"></use>
+        <a href="./index.html" class="header-nav__logo"
+          ><span class="header-nav__logo-second">Web</span>Studio</a
+        >
+        <!-- Кнопка открытия мобильного меню -->
+        <button class="header-brg" data-menu-open>
+          <svg class="header-brg__icon" width="24" height="16">
+            <use href="./images/icons.svg#brg-menu"></use>
+          </svg>
+        </button>
+        <!-- Мобильное меню -->
+        <div class="mobile-menu is-open" data-menu>
+          <!-- Кнопка закрытия телефонного меню -->
+          <button class="mobile-menu__btn" data-menu-close>
+            <svg class="mobile-menu__icon" width="19" height="19">
+              <use href="./images/icons.svg#icn-close"></use>
             </svg>
           </button>
-          <!-- Мобильное меню -->
-          <!-- <div class="backdrop is-open" data-menu>
-            <button class="mobile-menu__btn" data-menu-close>
-              <svg class="mobile-menu__icon" width="19" height="19">
-                <use href="./images/icons.svg#icn-close"></use>
-              </svg>
-            </button>
+          <!-- Навигация по сайту мобильного меню -->
+          <nav class="header-nav">
             <ul class="header-nav__list">
               <li class="header-nav__item">
                 <a href="./index.html" class="header-nav__link header-nav__actual">Студия</a>
@@ -52,6 +54,7 @@
               </li>
               <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
             </ul>
+            <!-- Контактная информация мобильного меню -->
             <ul class="header-list">
               <li class="header-list__item">
                 <a href="mailto:info@devstudio.com" class="header-list__link">
@@ -70,8 +73,8 @@
                 >
               </li>
             </ul>
-          </div> -->
-        </nav>
+          </nav>
+        </div>
       </div>
     </header>
     <!-- Край Шапки -->
