@@ -1,63 +1,61 @@
 /* Добавляет стили для hero блока */
 
-@media screen and (max-width: 480px) {
-  .hero {
-    background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)),
-      url(../images/index/team-work.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--color-white);
-    text-align: center;
-    max-width: 480px;
-    max-height: 400px;
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-  .hero-title {
-    margin: 0;
-    display: block;
-    color: var(--color-white);
+.hero {
+  background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)),
+    url(../images/index/team-work.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-white);
+  text-align: center;
+  max-width: 480px;
+  max-height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+.hero-title {
+  margin: 0;
+  display: block;
+  color: var(--color-white);
 
-    text-transform: uppercase;
-    font-weight: 900;
-    line-height: 1.4;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: 26px;
-    line-height: 42px;
-  }
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.4;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 26px;
+  line-height: 42px;
+}
 
-  .button {
-    padding: 10px 32px;
-    margin-top: 30px;
+.button {
+  padding: 10px 32px;
+  margin-top: 30px;
 
-    color: var(--color-white);
-    background-color: var(--accent-color);
+  color: var(--color-white);
+  background-color: var(--accent-color);
 
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
 
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 
-    transition: background-color var(--animation-main);
+  transition: background-color var(--animation-main);
 
-    &:hover,
-    &:focus {
-      background-color: var(--button-hover);
-      cursor: pointer;
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover);
+    cursor: pointer;
   }
 }
 

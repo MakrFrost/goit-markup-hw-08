@@ -1,72 +1,71 @@
 /* Добавляет стили для раздела "особенности" */
 
-@media screen and (max-width: 480px) {
-  .feature {
-    padding-top: 60px;
-    padding-bottom: 60px;
+.feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    background-color: var(--color-white);
+  background-color: var(--color-white);
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 0px;
+
+  &__antenna::before {
+    background-image: url(../images/index/antenna.png);
+  }
+  &__clock::before {
+    background-image: url(../images/index/clock.png);
+  }
+  &__diagram::before {
+    background-image: url(../images/index/diagram.png);
+  }
+  &__astronaut::before {
+    background-image: url(../images/index/astronaut.png);
   }
 
-  .feature-list {
-    margin: 0;
-    padding-left: 0px;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
 
-    &__antenna::before {
-      background-image: url(../images/index/antenna.png);
-    }
-    &__clock::before {
-      background-image: url(../images/index/clock.png);
-    }
-    &__diagram::before {
-      background-image: url(../images/index/diagram.png);
-    }
-    &__astronaut::before {
-      background-image: url(../images/index/astronaut.png);
-    }
+    color: var(--first-text-color);
 
-    &__title {
-      margin-top: 0;
-      margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-      color: var(--first-text-color);
+  &__text {
+    margin-bottom: 10px;
+    margin-top: 0;
 
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-align: center;
-    }
+    color: var(--second-text-color);
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 
-    &__text {
-      margin-bottom: 10px;
-      margin-top: 0;
+  &__item {
+    max-width: 480px;
+    list-style-type: none;
 
-      color: var(--second-text-color);
-      font-size: 14px;
-      line-height: 1.7;
-      letter-spacing: 0.03em;
-    }
-
-    &__item {
-      max-width: 480px;
-      list-style-type: none;
-
-      &::before {
-        content: '';
-        background-color: var(--bcg-img-color);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 70px 70px;
-        display: block;
-        width: 450px;
-        height: 120px;
-        margin-bottom: 30px;
-      }
+    &::before {
+      content: '';
+      background-color: var(--bcg-img-color);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70px 70px;
+      display: block;
+      width: 450px;
+      height: 120px;
+      margin-bottom: 30px;
     }
   }
 }
+
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 1200px) {
