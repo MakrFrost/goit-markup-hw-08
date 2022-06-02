@@ -1,9 +1,8 @@
 /* Ограничивающий контейнер */
-@media screen and (max-width: 480px) {
-  .container {
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 // .container {
