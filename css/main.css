@@ -35,7 +35,7 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header-brg {
+.header-brg__open {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@ body {
   background-color: white;
   cursor: pointer;
 }
-.header-brg:hover .header-brg__icon {
+.header-brg__open:hover .header-brg__icon {
   fill: var(--accent-color);
 }
 
@@ -120,7 +120,6 @@ body {
   padding: 0;
   list-style: none;
   justify-content: end;
-  display: none;
   /* Иконки */
 }
 .header-list__item {
@@ -135,8 +134,6 @@ body {
 .header-list__link {
   justify-content: center;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--second-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -161,9 +158,12 @@ body {
   pointer-events: auto;
 }
 
-.mobile-menu__btn {
+.mobile-menu__btn-close {
   border: 0;
   background-color: white;
+}
+.mobile-menu__btn-close:hover {
+  fill: var(--accent-color);
 }
 
 /* Стили для логотипа */

@@ -3,7 +3,7 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  &-brg {
+  &-brg__open {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,11 +111,9 @@
 
 .header-list {
   padding: 0;
-  // margin: 0 0 0 auto;
   list-style: none;
-  // display: flex;
   justify-content: end;
-  display: none;
+  // display: none;
 
   &__item {
     padding-left: auto;
@@ -134,11 +132,8 @@
   }
 
   &__link {
-    // display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     color: var(--second-text-color);
     text-decoration: none;
@@ -167,11 +162,14 @@
   visibility: visible;
   pointer-events: auto;
 }
-.mobile-menu__btn {
+.mobile-menu__container {
+}
+.mobile-menu__btn-close {
   border: 0;
   background-color: white;
-}
-.mobile-menu__icon {
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
 
 @media screen and (max-width: 768px) {
