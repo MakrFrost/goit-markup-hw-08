@@ -61,7 +61,7 @@
   padding: 11px;
 
   position: absolute;
-  right: -85px;
+  right: 100px;
   top: 11px;
   border: 0;
   background-color: white;
@@ -78,7 +78,7 @@
   width: 480px;
   height: 100vh;
   background-color: white;
-  opacity: 1;
+  opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
@@ -145,7 +145,12 @@
   padding: 0;
   margin: 0;
   list-style: none;
-
+  &__item {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 64px;
+    }
+  }
   &__link {
     color: var(--second-text-color);
     text-decoration: none;
@@ -158,9 +163,7 @@
     letter-spacing: 0.02em;
 
     transition: color var(--animation-main);
-    // &:last-child {
-    //   margin-bottom: 64px;
-    // }
+
     &:hover,
     &:focus {
       color: var(--accent-color);
@@ -174,6 +177,38 @@
 }
 .mail {
   font-size: 24px;
+}
+
+.mobile-social {
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    margin-right: 10px;
+
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      margin-left: 10px;
+      width: 22px;
+      height: 0;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      transform: rotate(90deg);
+    }
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+    text-decoration: none;
+  }
 }
 
 .mobile-nav__list {
