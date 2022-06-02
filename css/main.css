@@ -403,14 +403,14 @@ body {
 
 /* Добавляет стили для секции "Постоянные клиенты" */
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .clients-title {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.7;
   text-align: center;
   letter-spacing: 0.03em;
@@ -419,25 +419,27 @@ body {
 
 .client-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
 .client-list__item {
   margin-right: 30px;
+  margin-bottom: 30px;
   list-style: none;
 }
-.client-list__item:last-child {
+.client-list__item:nth-child(2n) {
   margin-right: 0;
 }
-
+.client-list__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
 .client-list__link {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  padding: 16px 32px;
-  width: 170px;
+  padding: 16px 52px;
+  width: 210px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -448,7 +450,6 @@ body {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
-
 .client-list__logo {
   fill: currentColor;
 }
