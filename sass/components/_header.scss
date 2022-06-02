@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
 
+    padding: 0;
     width: 40px;
     height: 40px;
 
@@ -88,6 +89,7 @@
 .header-nav__logo {
   display: block;
   padding: 16px 0;
+  margin-right: 276px;
 
   color: var(--color-black);
 
@@ -154,6 +156,23 @@
       color: var(--accent-color);
     }
   }
+}
+
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-menu__btn {
+  border: 0;
+  background-color: white;
+}
+.mobile-menu__icon {
 }
 
 @media screen and (max-width: 768px) {
