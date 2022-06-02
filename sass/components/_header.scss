@@ -104,7 +104,7 @@
 }
 
 .header-nav__list {
-  display: none;
+  // display: none;
 }
 
 /* Блок с адресом и телефоном */
@@ -157,11 +157,26 @@
   border: 0;
   background-color: white;
 }
+.header-menu__icon {
+}
 
-// mobile-menu__close
+// Кнопка закрытия мобильного меню
+.mobile-menu__close {
+  border: 0;
+  background-color: white;
+}
+.mobile-menu__icon {
+}
 
+// Мобильное меню
 .mobile-menu {
-  opacity: 0;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
   visibility: hidden;
   pointer-events: none;
 }
@@ -170,13 +185,14 @@
   visibility: visible;
   pointer-events: auto;
 }
+// Тело мобильного меню
 .mobile-menu__container {
-}
-.mobile-menu__close {
-  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 100%;
   background-color: white;
-}
-.mobile-menu__icon {
 }
 
 @media screen and (max-width: 768px) {

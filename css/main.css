@@ -111,10 +111,6 @@ body {
   color: var(--accent-color);
 }
 
-.header-nav__list {
-  display: none;
-}
-
 /* Блок с адресом и телефоном */
 .header-list {
   padding: 0;
@@ -151,8 +147,19 @@ body {
   background-color: white;
 }
 
+.mobile-menu__close {
+  border: 0;
+  background-color: white;
+}
+
 .mobile-menu {
-  opacity: 0;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
   visibility: hidden;
   pointer-events: none;
 }
@@ -163,8 +170,12 @@ body {
   pointer-events: auto;
 }
 
-.mobile-menu__close {
-  border: 0;
+.mobile-menu__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 100%;
   background-color: white;
 }
 
