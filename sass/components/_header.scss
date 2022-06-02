@@ -61,7 +61,7 @@
   padding: 11px;
 
   position: absolute;
-  right: 100px;
+  right: 15px;
   top: 11px;
   border: 0;
   background-color: white;
@@ -78,13 +78,11 @@
   max-width: 480px;
   height: 796px;
   background-color: white;
-  opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   pointer-events: none;
 }
 .mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
+  visibility: hidden;
   pointer-events: auto;
 }
 // Тело мобильного меню
@@ -94,7 +92,7 @@
   left: 0;
   padding-left: 40px;
 
-  max-width: 480px;
+  width: 480px;
   height: 100%;
   background-color: white;
 }
