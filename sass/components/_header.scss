@@ -3,7 +3,7 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  &-brg__open {
+  &-brg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,6 +152,14 @@
   }
 }
 
+// Кнопка открытия меню на телефоне
+.header-menu__open {
+  border: 0;
+  background-color: white;
+}
+
+// mobile-menu__close
+
 .mobile-menu {
   opacity: 0;
   visibility: hidden;
@@ -164,12 +172,11 @@
 }
 .mobile-menu__container {
 }
-.mobile-menu__btn-close {
+.mobile-menu__close {
   border: 0;
   background-color: white;
-  &:hover {
-    fill: var(--accent-color);
-  }
+}
+.mobile-menu__icon {
 }
 
 @media screen and (max-width: 768px) {
