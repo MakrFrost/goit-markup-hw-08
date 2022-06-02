@@ -83,7 +83,7 @@ body {
 .mobile-menu__close {
   padding: 11px;
   position: absolute;
-  right: -185px;
+  right: -85px;
   top: 11px;
   border: 0;
   background-color: white;
@@ -133,6 +133,9 @@ body {
 .mobile-nav__list .mobile-nav__actual {
   color: var(--accent-color);
 }
+.mobile-nav__item:last-child {
+  margin-bottom: 302px;
+}
 .mobile-nav__link {
   display: block;
   margin-bottom: 32px;
@@ -151,36 +154,30 @@ body {
 
 .mobile-list {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
-
-/* Блок с адресом и телефоном */
-.header-list {
-  justify-content: end;
-  /* Иконки */
-}
-.header-list__item {
-  padding-left: auto;
-}
-.header-list__item:last-child {
-  margin-right: 0px;
-}
-.header-list__icon {
-  fill: currentColor;
-}
-.header-list__link {
-  justify-content: center;
-  align-items: center;
+.mobile-list__link {
   color: var(--second-text-color);
   text-decoration: none;
+  margin-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color var(--animation-main);
 }
-.header-list__link:hover, .header-list__link:focus {
+.mobile-list__link:hover, .mobile-list__link:focus {
   color: var(--accent-color);
+}
+
+.number {
+  font-size: 34px;
+  color: var(--accent-color);
+}
+
+.mail {
+  font-size: 24px;
 }
 
 /* Стили для логотипа */
