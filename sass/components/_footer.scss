@@ -6,14 +6,21 @@
 
   background-color: var(--bcg-color);
 
+  max-width: 100vh;
+
   &-flex {
-    // display: flex;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
   }
 }
 
 /* Логотип футера */
+
+.container-footer {
+  text-align: center;
+}
 
 .footer-logo {
   display: block;
@@ -40,7 +47,7 @@
   padding-left: 0;
 
   &__item {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     list-style-type: none;
     &:last-child {
       margin-bottom: 0;
@@ -91,11 +98,13 @@
 
 .footer-social {
   display: block;
-  margin-right: 93px;
+  padding-top: 60px;
 
   /* Заголовок секции*/
 
   &__title {
+    text-align: center;
+
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
@@ -110,8 +119,8 @@
   /* Список */
 
   &__list {
-    // display: flex;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
 
     margin: 0;
     padding: 0;
@@ -132,7 +141,7 @@
   /* Ссылки на соц. сети */
 
   &__link {
-    // display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -158,6 +167,11 @@
 /* Добавляет стили для формы ввода в футере */
 
 .footer-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+
   &__title {
     display: block;
     margin-bottom: 20px;
@@ -172,10 +186,10 @@
 
   &__input {
     height: 50px;
-    width: 358px;
+    width: 450px;
 
     padding: 15px;
-    margin: 0 12px 0 0;
+    margin-bottom: 20px;
 
     background-color: #2f303a;
     color: var(--color-white);

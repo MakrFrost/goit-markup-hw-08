@@ -18,6 +18,7 @@
 
 /* Добавляет/делает сброс стилей для тега body */
 body {
+  min-width: 480px;
   margin: 0;
   color: var(--first-text-color);
   background-color: var(--color-white);
@@ -27,7 +28,6 @@ body {
 /* Ограничивающий контейнер */
 @media screen and (max-width: 480px) {
   .container {
-    width: 480px;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -141,7 +141,7 @@ body {
   margin-right: auto;
   color: var(--color-white);
   text-align: center;
-  max-width: 480px;
+  min-width: 480px;
   max-height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -227,7 +227,7 @@ body {
   letter-spacing: 0.03em;
 }
 .feature-list__item {
-  max-width: 480px;
+  max-width: 450px;
   list-style-type: none;
 }
 .feature-list__item::before {
@@ -329,7 +329,7 @@ body {
 .team-list__img {
   margin-bottom: 0;
   display: block;
-  width: 100%;
+  min-width: 100%;
   height: auto;
 }
 .team-list__wrap {
@@ -459,13 +459,20 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bcg-color);
+  max-width: 100vh;
 }
 .footer-flex {
+  display: flex;
   align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+  align-content: center;
 }
 
 /* Логотип футера */
+.container-footer {
+  text-align: center;
+}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -489,7 +496,7 @@ body {
   /* Блок информации для связи*/
 }
 .footer-list__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   list-style-type: none;
 }
 .footer-list__item:last-child {
@@ -524,13 +531,14 @@ body {
 /* Блок социальных сетей в футере */
 .footer-social {
   display: block;
-  margin-right: 93px;
+  padding-top: 60px;
   /* Заголовок секции*/
   /* Список */
   /* Элементы списка */
   /* Ссылки на соц. сети */
 }
 .footer-social__title {
+  text-align: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -541,7 +549,8 @@ body {
   margin-bottom: 20px;
 }
 .footer-social__list {
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -554,6 +563,7 @@ body {
   margin-right: 0px;
 }
 .footer-social__link {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -569,6 +579,12 @@ body {
 
 /* Край блока социальных сетей в футере */
 /* Добавляет стили для формы ввода в футере */
+.footer-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
 .footer-form__title {
   display: block;
   margin-bottom: 20px;
@@ -581,9 +597,9 @@ body {
 }
 .footer-form__input {
   height: 50px;
-  width: 358px;
+  width: 450px;
   padding: 15px;
-  margin: 0 12px 0 0;
+  margin-bottom: 20px;
   background-color: #2f303a;
   color: var(--color-white);
   border: 1px solid rgba(255, 255, 255, 0.3);
