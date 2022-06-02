@@ -50,49 +50,8 @@ body {
   fill: var(--accent-color);
 }
 
-/* Начало блока навигации */
 .header-nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header-nav__item {
-  position: relative;
-}
-.header-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--first-text-color);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color var(--animation-main);
-}
-.header-nav__link:hover, .header-nav__link:focus {
-  color: var(--accent-color);
-  transition: color var(--animation-main);
-}
-.header-nav__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-}
-.header-nav__list .header-nav__actual {
-  color: var(--accent-color);
-}
-.header-nav__list .header-nav__actual::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: var(--accent-color);
-  border-radius: 2px;
 }
 
 /* Стили для логотипа */
@@ -111,10 +70,92 @@ body {
   color: var(--accent-color);
 }
 
-/* Блок с адресом и телефоном */
-.header-list {
+.header-menu__open {
+  padding: 0;
+  border: 0;
+  background-color: white;
+}
+
+.header-menu__icon {
+  display: block;
+}
+
+.mobile-menu__close {
+  padding: 11px;
+  position: absolute;
+  right: -185px;
+  top: 11px;
+  border: 0;
+  background-color: white;
+}
+
+.mobile-menu__icon {
+  display: block;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 480px;
+  height: 100vh;
+  background-color: white;
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 40px;
+  max-width: 480px;
+  height: 100%;
+  background-color: white;
+}
+
+.mobile-nav {
+  padding-top: 48px;
+}
+.mobile-nav__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+.mobile-nav__list .mobile-nav__actual {
+  color: var(--accent-color);
+}
+.mobile-nav__link {
+  display: block;
+  margin-bottom: 32px;
+  color: var(--first-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color var(--animation-main);
+}
+.mobile-nav__link:hover, .mobile-nav__link:focus {
+  color: var(--accent-color);
+  transition: color var(--animation-main);
+}
+
+.mobile-list {
   padding: 0;
   list-style: none;
+}
+
+/* Блок с адресом и телефоном */
+.header-list {
   justify-content: end;
   /* Иконки */
 }
@@ -140,43 +181,6 @@ body {
 }
 .header-list__link:hover, .header-list__link:focus {
   color: var(--accent-color);
-}
-
-.header-menu__open {
-  border: 0;
-  background-color: white;
-}
-
-.mobile-menu__close {
-  border: 0;
-  background-color: white;
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 1;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.mobile-menu__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 480px;
-  height: 100%;
-  background-color: white;
 }
 
 /* Стили для логотипа */

@@ -22,65 +22,8 @@
   }
 }
 
-/* Начало блока навигации */
-
 .header-nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__item {
-    // margin-right: 50px;
-    position: relative;
-
-    &:last-child {
-      // margin-right: 0;
-    }
-  }
-
-  &__link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    color: var(--first-text-color);
-    text-decoration: none;
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color var(--animation-main);
-
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-      transition: color var(--animation-main);
-    }
-  }
-
-  &__list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-  }
-
-  &__list &__actual {
-    color: var(--accent-color);
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 4px;
-      width: 100%;
-      background-color: var(--accent-color);
-      border-radius: 2px;
-    }
-  }
 }
 
 /* Стили для логотипа */
@@ -103,15 +46,109 @@
   }
 }
 
-.header-nav__list {
-  // display: none;
+// Кнопка открытия меню на телефоне
+.header-menu__open {
+  padding: 0;
+  border: 0;
+  background-color: white;
+}
+.header-menu__icon {
+  display: block;
+}
+
+// Кнопка закрытия мобильного меню
+.mobile-menu__close {
+  padding: 11px;
+
+  position: absolute;
+  right: -185px;
+  top: 11px;
+  border: 0;
+  background-color: white;
+}
+.mobile-menu__icon {
+  display: block;
+}
+
+// Мобильное меню
+.mobile-menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 480px;
+  height: 100vh;
+  background-color: white;
+  opacity: 1;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+// Тело мобильного меню
+.mobile-menu__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 40px;
+
+  max-width: 480px;
+  height: 100%;
+  background-color: white;
+}
+
+// Блок навигации
+.mobile-nav {
+  padding-top: 48px;
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  &__list &__actual {
+    color: var(--accent-color);
+  }
+  &__link {
+    display: block;
+    margin-bottom: 32px;
+
+    color: var(--first-text-color);
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color var(--animation-main);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      transition: color var(--animation-main);
+    }
+  }
+}
+
+.mobile-list {
+  padding: 0;
+  list-style: none;
+}
+.mobile-list__item {
+}
+.mobile-list__link {
+}
+.mobile-list__icon {
 }
 
 /* Блок с адресом и телефоном */
 
 .header-list {
-  padding: 0;
-  list-style: none;
   justify-content: end;
   // display: none;
 
@@ -152,47 +189,13 @@
   }
 }
 
-// Кнопка открытия меню на телефоне
-.header-menu__open {
-  border: 0;
-  background-color: white;
+.mobile-nav__list {
 }
-.header-menu__icon {
+.mobile-nav__item {
 }
-
-// Кнопка закрытия мобильного меню
-.mobile-menu__close {
-  border: 0;
-  background-color: white;
+.mobile-nav__link {
 }
-.mobile-menu__icon {
-}
-
-// Мобильное меню
-.mobile-menu {
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 1;
-  visibility: hidden;
-  pointer-events: none;
-}
-.mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-// Тело мобильного меню
-.mobile-menu__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 480px;
-  height: 100%;
-  background-color: white;
+.mobile-nav__actual {
 }
 
 @media screen and (max-width: 768px) {
