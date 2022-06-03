@@ -76,7 +76,7 @@
   top: 0px;
   left: 0px;
   max-width: 480px;
-  height: 796px;
+  height: 100%;
   background-color: white;
   visibility: visible;
   pointer-events: none;
@@ -187,7 +187,7 @@
   &__item {
     margin-right: 10px;
 
-    &::after {
+    &:not(:last-child)::after {
       content: '';
       top: 0;
       left: 0;

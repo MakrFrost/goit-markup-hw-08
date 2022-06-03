@@ -113,7 +113,7 @@ body {
   top: 0px;
   left: 0px;
   max-width: 480px;
-  height: 796px;
+  height: 100%;
   background-color: white;
   visibility: visible;
   pointer-events: none;
@@ -208,7 +208,7 @@ body {
 .mobile-social__item {
   margin-right: 10px;
 }
-.mobile-social__item::after {
+.mobile-social__item:not(:last-child)::after {
   content: "";
   top: 0;
   left: 0;
