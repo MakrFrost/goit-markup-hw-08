@@ -195,7 +195,7 @@
   &__item {
     margin-right: 10px;
 
-    &::after:not(:last-child) {
+    &:not(:last-child)::after {
       content: '';
       top: 0;
       left: 0;
