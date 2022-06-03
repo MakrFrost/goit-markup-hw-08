@@ -51,6 +51,9 @@
   padding: 0;
   border: 0;
   background-color: white;
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
 .header-menu__icon {
   display: block;
@@ -76,10 +79,9 @@
   top: 0px;
   left: 0px;
   max-width: 480px;
-  height: 100%;
+  height: 796px;
   background-color: white;
   visibility: visible;
-  pointer-events: none;
 }
 .mobile-menu.is-open {
   visibility: hidden;
@@ -187,7 +189,7 @@
   &__item {
     margin-right: 10px;
 
-    &:not(:last-child)::after {
+    &::after:not(:last-child) {
       content: '';
       top: 0;
       left: 0;

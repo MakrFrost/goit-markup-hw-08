@@ -22,38 +22,90 @@
     <!-- Шапка -->
     <header class="header">
       <div class="container header-nav">
-        <nav class="header-nav">
-          <a href="./index.html" class="header-nav__logo"
-            ><span class="header-nav__logo-second">Web</span>Studio</a
-          >
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a href="./index.html" class="header-nav__link">Студия</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="./portfolio.html" class="header-nav__link header-nav__actual">Портфолио</a>
-            </li>
-            <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="header-list">
-          <li class="header-list__item">
-            <a href="mailto:info@devstudio.com" class="header-list__link">
-              <svg class="header-list__icon" width="16" height="12">
-                <use href="./images/icons.svg#mail"></use>
+        <a href="./index.html" class="header-nav__logo"
+          ><span class="header-nav__logo-second">Web</span>Studio</a
+        >
+        <!-- Кнопка открытия мобильного меню -->
+        <button class="header-menu__open" data-menu-open>
+          <svg class="header-menu__icon" width="24" height="16">
+            <use href="./images/icons.svg#brg-menu"></use>
+          </svg>
+        </button>
+        <!-- Мобильное меню -->
+        <div class="mobile-menu is-open" data-menu>
+          <div class="container mobile-menu__container">
+            <!-- Кнопка закрытия телефонного меню -->
+            <button class="mobile-menu__close" data-menu-close>
+              <svg class="mobile-menu__icon" width="19" height="19">
+                <use href="./images/icons.svg#icn-close"></use>
               </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-list__item">
-            <a href="tel:+380961111111" class="header-list__link">
-              <svg class="header-list__icon" width="10" height="16">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+            </button>
+            <!-- Навигация по сайту мобильного меню -->
+            <nav class="mobile-nav">
+              <ul class="mobile-nav__list">
+                <li class="mobile-nav__item">
+                  <a href="./index.html" class="mobile-nav__link mobile-nav__actual">Студия</a>
+                </li>
+                <li class="mobile-nav__item">
+                  <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+                </li>
+                <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
+              </ul>
+              <!-- Контактная информация мобильного меню -->
+              <ul class="mobile-list">
+                <li class="mobile-list__item">
+                  <a href="tel:+380961111111" class="mobile-list__link number">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mobile-list__item">
+                  <a href="mailto:info@devstudio.com" class="mobile-list__link mail"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <!-- Социальные сети -->
+              <ul class="mobile-social__list">
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link"
+                    href="https://www.instagram.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link"
+                    href="https://twitter.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link"
+                    href="https://facebook.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="mobile-social__item">
+                  <a
+                    class="mobile-social__link"
+                    href="https://linkedin.com/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Край Шапки -->
@@ -389,5 +441,8 @@
       </div>
     </footer>
     <!-- Край подвала -->
+
+    <!-- Script JS -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
