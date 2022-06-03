@@ -51,7 +51,8 @@
   padding: 0;
   border: 0;
   background-color: white;
-  &:hover {
+  &:hover,
+  &:focus {
     fill: var(--accent-color);
   }
 }
@@ -68,6 +69,11 @@
   top: 11px;
   border: 0;
   background-color: white;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 .mobile-menu__icon {
   display: block;

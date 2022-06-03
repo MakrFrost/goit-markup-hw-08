@@ -90,7 +90,7 @@ body {
   border: 0;
   background-color: white;
 }
-.header-menu__open:hover {
+.header-menu__open:hover, .header-menu__open:focus {
   fill: var(--accent-color);
 }
 
@@ -105,6 +105,9 @@ body {
   top: 11px;
   border: 0;
   background-color: white;
+}
+.mobile-menu__close:hover, .mobile-menu__close:focus {
+  fill: var(--accent-color);
 }
 
 .mobile-menu__icon {
