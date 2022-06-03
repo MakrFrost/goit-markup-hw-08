@@ -167,15 +167,10 @@
 /* Добавляет стили для формы ввода в футере */
 
 .footer-form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 60px;
+  margin-top: 60px;
+  text-align: center;
 
   &__title {
-    display: block;
-    margin-bottom: 20px;
-
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
@@ -186,9 +181,10 @@
 
   &__input {
     height: 50px;
-    min-width: 450px;
+    width: 100%;
 
     padding: 15px;
+    margin-top: 20px;
     margin-bottom: 20px;
 
     background-color: #2f303a;
