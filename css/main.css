@@ -995,6 +995,9 @@ body {
 .cards-list__item {
   list-style-type: none;
 }
+.cards-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 .cards-list__link {
   display: block;
   text-decoration: none;
