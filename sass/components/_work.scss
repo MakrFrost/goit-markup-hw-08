@@ -3,9 +3,6 @@
 /*Добавляет адаптив*/
 
 @media screen and (max-width: 480px) {
-  .work {
-    display: none;
-  }
 }
 @media screen and (max-width: 768px) {
 }
@@ -17,6 +14,8 @@
   padding-top: 94px;
 
   background-color: var(--color-white);
+
+  display: none;
 
   &-title {
     margin-top: 0px;

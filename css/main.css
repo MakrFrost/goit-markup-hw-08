@@ -18,8 +18,6 @@
 
 /* Добавляет/делает сброс стилей для тега body */
 body {
-  max-width: 480px;
-  margin: 0;
   color: var(--first-text-color);
   background-color: var(--color-white);
   font-family: "Roboto", sans-serif;
@@ -27,42 +25,14 @@ body {
 
 /* Ограничивающий контейнер */
 .container {
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1140px) {
-  .container {
-    width: 1140px;
-  }
 }
 
 /* Добавляет стили для хедера*/
 .header {
   border-bottom: 1px solid #ececec;
-}
-.header-brg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
-}
-.header-brg:hover .header-brg__icon {
-  fill: var(--accent-color);
 }
 
 .header-nav {
@@ -240,12 +210,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-left: auto;
-  margin-right: auto;
   color: var(--color-white);
   text-align: center;
-  max-width: 480px;
-  max-height: 400px;
+  max-width: 100%;
   padding-top: 118px;
   padding-bottom: 118px;
 }
@@ -330,7 +297,7 @@ body {
   letter-spacing: 0.03em;
 }
 .feature-list__item {
-  max-width: 450px;
+  width: 100%;
   list-style-type: none;
 }
 .feature-list__item::before {
@@ -340,22 +307,18 @@ body {
   background-position: center;
   background-size: 70px 70px;
   display: block;
-  max-width: 450px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
 }
 
 /* Добавляет стили для раздела "чем занимаемся" */
 /*Добавляет адаптив*/
-@media screen and (max-width: 480px) {
-  .work {
-    display: none;
-  }
-}
 .work {
   padding-bottom: 94px;
   padding-top: 94px;
   background-color: var(--color-white);
+  display: none;
 }
 .work-title {
   margin-top: 0px;
@@ -429,6 +392,9 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.team-list__items:not(:last-child) {
+  margin-bottom: 30px;
+}
 .team-list__img {
   margin-bottom: 0;
   display: block;
@@ -436,7 +402,6 @@ body {
   height: auto;
 }
 .team-list__wrap {
-  margin-bottom: 30px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   padding-top: 30px;
@@ -560,7 +525,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bcg-color);
-  max-width: 100vh;
 }
 .footer-flex {
   display: flex;
