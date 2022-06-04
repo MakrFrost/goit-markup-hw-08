@@ -3,12 +3,76 @@
 .header {
   border-bottom: 1px solid #ececec;
 
+  // Стили для кнопки
+  &__button {
+    position: relative;
+    z-index: 100;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__wrap {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-white);
+
+    &.is-open {
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 16px;
+    transition: fill var(--animation-main);
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 64px;
+  }
+
+  &__link {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+  }
+
   &__content {
     position: relative;
     padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__item:not(:last-child):after {
+    content: '';
+
+    background-color: rgba(33, 33, 33, 0.2);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 22px;
+    height: 0px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
   }
 }
 
@@ -28,17 +92,6 @@
   }
 }
 
-// Стили для кнопки
-.header__button {
-  position: relative;
-  z-index: 100;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-}
-
 .header__button .icon-cross {
   display: none;
 }
@@ -49,32 +102,6 @@
 
 .header__button.is-open .icon-menu {
   display: none;
-}
-
-.header__wrap {
-  visibility: hidden;
-  pointer-events: none;
-  position: absolute;
-  z-index: 99;
-  right: 0;
-  top: 0;
-  width: 100%;
-  background-color: var(--color-white);
-
-  &.is-open {
-    visibility: visible;
-    pointer-events: auto;
-  }
-}
-
-.header__icon {
-  width: 24px;
-  height: 16px;
-  transition: fill var(--animation-main);
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
 }
 
 // Стили для навигации
@@ -138,33 +165,6 @@
   &__icon {
     display: none;
   }
-}
-
-.header__social {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 64px;
-}
-
-.header__item:not(:last-child):after {
-  content: '';
-
-  background-color: rgba(33, 33, 33, 0.2);
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: 22px;
-  height: 0px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
-}
-
-.header__link {
-  color: var(--accent-color);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
 }
 
 // .header {
