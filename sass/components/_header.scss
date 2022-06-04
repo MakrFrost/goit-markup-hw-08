@@ -60,11 +60,11 @@
   top: 0;
   width: 100%;
   background-color: var(--color-white);
-}
 
-.header__wrap.is-open {
-  visibility: visible;
-  pointer-events: auto;
+  &.is-open {
+    visibility: visible;
+    pointer-events: auto;
+  }
 }
 
 .header__icon {
@@ -125,7 +125,7 @@
     transition: color var(--animation-main);
   }
 
-  .contacts__link-blue {
+  &__link-blue {
     font-size: 34px;
     color: var(--accent-color);
   }

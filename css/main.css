@@ -69,7 +69,7 @@ a {
 
 .header__button {
   position: relative;
-  z-index: 999;
+  z-index: 100;
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -99,7 +99,6 @@ a {
   width: 100%;
   background-color: var(--color-white);
 }
-
 .header__wrap.is-open {
   visibility: visible;
   pointer-events: auto;
@@ -151,7 +150,7 @@ a {
   color: var(--fist-text-color);
   transition: color var(--animation-main);
 }
-.contacts .contacts__link-blue {
+.contacts__link-blue {
   font-size: 34px;
   color: var(--accent-color);
 }
@@ -1012,4 +1011,9 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Край блока карточек *//*# sourceMappingURL=main.css.map */
+/* Край блока карточек */
+@media screen and (min-width: 481px) {
+  .header {
+    background-color: tomato;
+  }
+}/*# sourceMappingURL=main.css.map */
