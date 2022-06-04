@@ -3,229 +3,399 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  // &-brg {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-
-  //   padding: 0;
-  //   width: 40px;
-  //   height: 40px;
-
-  //   border: none;
-  //   background-color: white;
-  //   cursor: pointer;
-
-  //   &:hover .header-brg__icon {
-  //     fill: var(--accent-color);
-  //   }
-  // }
+  &__content {
+    position: relative;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Стили для логотипа */
-
-.header-nav__logo {
+.logo {
   display: block;
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-color);
+  font-size: 24px;
+  line-height: 1.16;
+  text-decoration: none;
+
   padding: 16px 0;
 
-  color: var(--color-black);
-
-  font-family: 'Raleway', sans-serif;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-
-  &-second {
+  &__text {
     color: var(--accent-color);
   }
 }
-
-// Кнопка открытия меню на телефоне
-.header-menu__open {
+.header__button {
+  position: relative;
+  z-index: 999;
+  display: inline-flex;
+  margin: 0;
   padding: 0;
-  border: 0;
-  background-color: white;
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
+  background-color: transparent;
+  border: none;
 }
-.header-menu__icon {
+
+.header__button .icon-cross {
+  display: none;
+}
+
+.header__button.is-open .icon-cross {
   display: block;
 }
 
-// Кнопка закрытия мобильного меню
-.mobile-menu__close {
-  padding: 11px;
-
-  position: absolute;
-  right: 8px;
-  top: 11px;
-  border: 0;
-  background-color: white;
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
-}
-.mobile-menu__icon {
-  display: block;
+.header__button.is-open .icon-menu {
+  display: none;
 }
 
-// Мобильное меню
-.mobile-menu {
-  z-index: 1;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  max-width: 480px;
-  height: 796px;
-  background-color: white;
-  visibility: visible;
-}
-.mobile-menu.is-open {
+.header__wrap {
   visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.header__wrap.is-open {
+  visibility: visible;
   pointer-events: auto;
 }
-// Тело мобильного меню
-.mobile-menu__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-left: 40px;
 
-  width: 480px;
-  height: 100%;
-  background-color: white;
+.header__icon {
+  width: 24px;
+  height: 16px;
+  transition: fill var(--animation-main);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
-// Блок навигации
-.mobile-nav {
-  padding-top: 48px;
-
+.navigation {
   &__list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
   }
+  padding: 48px 40px;
+}
 
-  &__list &__actual {
+.navigation__item {
+  margin-bottom: 32px;
+}
+
+.navigation__item:last-child {
+  margin-bottom: 200px;
+}
+
+.navigation__link {
+  position: relative;
+  display: block;
+
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--fist-text-color);
+  transition: color var(--animation-main);
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
-  &__item {
-    &:last-child {
-      margin-bottom: 302px;
-    }
-  }
 
-  &__link {
-    display: block;
-    margin-bottom: 32px;
-
-    color: var(--first-text-color);
-    text-decoration: none;
-
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color var(--animation-main);
-
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-      transition: color var(--animation-main);
-    }
+  &--activ {
+    color: var(--accent-color);
   }
 }
 
-.mobile-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  &__item {
+.contacts {
+  &__item:not(:last-child) {
     margin-bottom: 32px;
-    &:last-child {
-      margin-bottom: 64px;
-    }
   }
+
   &__link {
-    color: var(--second-text-color);
-    text-decoration: none;
-
-    margin-bottom: 32px;
-
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    color: var(--fist-text-color);
 
     transition: color var(--animation-main);
+  }
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+  .contacts__link-blue {
+    font-size: 34px;
+    color: var(--accent-color);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+
+  &__icon {
+    display: none;
+    // margin-right: 10px;
+    // fill: currentColor;
   }
 }
 
-.number {
-  font-size: 34px;
+.header__social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.header__item:not(:last-child):after {
+  content: '';
+
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 22px;
+  height: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+.header__link {
   color: var(--accent-color);
-}
-.mail {
-  font-size: 24px;
-}
-
-.mobile-social {
-  &__list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  &__item {
-    margin-right: 10px;
-
-    &:not(:last-child)::after {
-      content: '';
-      top: 0;
-      left: 0;
-      margin-left: 10px;
-      width: 22px;
-      height: 0;
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      transform: rotate(90deg);
-    }
-  }
-  &__link {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-
-    color: var(--accent-color);
-    text-decoration: none;
-  }
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
 }
 
-.mobile-nav__list {
-}
-.mobile-nav__item {
-}
-.mobile-nav__link {
-}
-.mobile-nav__actual {
-}
+// .header {
+//   border-bottom: 1px solid #ececec;
+
+//   // &-brg {
+//   //   display: flex;
+//   //   justify-content: center;
+//   //   align-items: center;
+
+//   //   padding: 0;
+//   //   width: 40px;
+//   //   height: 40px;
+
+//   //   border: none;
+//   //   background-color: white;
+//   //   cursor: pointer;
+
+//   //   &:hover .header-brg__icon {
+//   //     fill: var(--accent-color);
+//   //   }
+//   // }
+// }
+
+// .header-nav {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// /* Стили для логотипа */
+
+// .header-nav__logo {
+//   display: block;
+//   padding: 16px 0;
+
+//   color: var(--color-black);
+
+//   font-family: 'Raleway', sans-serif;
+//   text-decoration: none;
+//   font-weight: 700;
+//   font-size: 26px;
+//   line-height: 1.2;
+
+//   &-second {
+//     color: var(--accent-color);
+//   }
+// }
+
+// // Кнопка открытия меню на телефоне
+// .header-menu__open {
+//   padding: 0;
+//   border: 0;
+//   background-color: white;
+//   &:hover,
+//   &:focus {
+//     fill: var(--accent-color);
+//   }
+// }
+// .header-menu__icon {
+//   display: block;
+// }
+
+// // Кнопка закрытия мобильного меню
+// .mobile-menu__close {
+//   padding: 11px;
+
+//   position: absolute;
+//   right: 0;
+//   top: 11px;
+//   border: 0;
+//   background-color: white;
+
+//   &:hover,
+//   &:focus {
+//     fill: var(--accent-color);
+//   }
+// }
+// .mobile-menu__icon {
+//   display: block;
+// }
+
+// // Мобильное меню
+// .mobile-menu {
+//   z-index: 1;
+//   position: fixed;
+//   top: 0px;
+//   left: 0px;
+//   max-width: 480px;
+//   // height: 796px;
+//   background-color: white;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
+// .mobile-menu.is-open {
+//   position: relative;
+//   visibility: visible;
+//   pointer-events: auto;
+// }
+// // Тело мобильного меню
+// .mobile-menu__container {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   // left: 0;
+//   padding: 40px;
+
+//   width: 480px;
+//   // height: 100%;
+//   background-color: white;
+// }
+
+// // Блок навигации
+// .mobile-nav {
+//   &__list {
+//     list-style-type: none;
+//     padding: 0;
+//     margin: 0;
+//     justify-content: center;
+//   }
+
+//   &__list &__actual {
+//     color: var(--accent-color);
+//   }
+
+//   &__item {
+//     margin-bottom: 32px;
+//     &:last-child {
+//       margin-bottom: 302px;
+//     }
+//   }
+
+//   &__link {
+//     color: var(--first-text-color);
+//     text-decoration: none;
+
+//     font-weight: 500;
+//     font-size: 40px;
+//     line-height: 1.14;
+//     letter-spacing: 0.02em;
+
+//     transition: color var(--animation-main);
+
+//     &:hover,
+//     &:focus {
+//       color: var(--accent-color);
+//       transition: color var(--animation-main);
+//     }
+//   }
+// }
+
+// .mobile-list {
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+//   &__item {
+//     margin-bottom: 32px;
+//     &:last-child {
+//       margin-bottom: 64px;
+//     }
+//   }
+//   &__link {
+//     color: var(--second-text-color);
+//     text-decoration: none;
+
+//     margin-bottom: 32px;
+
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.02em;
+
+//     transition: color var(--animation-main);
+
+//     &:hover,
+//     &:focus {
+//       color: var(--accent-color);
+//     }
+//   }
+// }
+
+// .number {
+//   font-size: 34px;
+//   color: var(--accent-color);
+// }
+// .mail {
+//   font-size: 24px;
+// }
+
+// .mobile-social {
+//   &__list {
+//     display: flex;
+//     flex-wrap: wrap;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//   }
+//   &__item {
+//     margin-right: 10px;
+
+//     &:not(:last-child)::after {
+//       content: '';
+//       top: 0;
+//       left: 0;
+//       margin-left: 10px;
+//       width: 22px;
+//       height: 0;
+//       border: 1px solid rgba(33, 33, 33, 0.2);
+//       transform: rotate(90deg);
+//     }
+//   }
+//   &__link {
+//     font-weight: 500;
+//     font-size: 18px;
+//     line-height: 22px;
+//     letter-spacing: 0.02em;
+
+//     color: var(--accent-color);
+//     text-decoration: none;
+//   }
+// }
+
+// .mobile-nav__list {
+// }
+// .mobile-nav__item {
+// }
+// .mobile-nav__link {
+// }
+// .mobile-nav__actual {
+// }
 
 // .header {
 //   border-bottom: 1px solid #ececec;

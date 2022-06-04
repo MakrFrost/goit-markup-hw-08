@@ -24,6 +24,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Ограничивающий контейнер */
 .container {
   width: 100%;
@@ -35,173 +46,148 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-
-.header-nav {
+.header__content {
+  position: relative;
+  padding: 0 15px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-/* Стили для логотипа */
-.header-nav__logo {
+.logo {
   display: block;
-  padding: 16px 0;
-  color: var(--color-black);
   font-family: "Raleway", sans-serif;
+  color: var(--text-color);
+  font-size: 24px;
+  line-height: 1.16;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  padding: 16px 0;
 }
-.header-nav__logo-second {
+.logo__text {
   color: var(--accent-color);
 }
 
-.header-menu__open {
+.header__button {
+  position: relative;
+  z-index: 999;
+  display: inline-flex;
+  margin: 0;
   padding: 0;
-  border: 0;
-  background-color: white;
-}
-.header-menu__open:hover, .header-menu__open:focus {
-  fill: var(--accent-color);
+  background-color: transparent;
+  border: none;
 }
 
-.header-menu__icon {
+.header__button .icon-cross {
+  display: none;
+}
+
+.header__button.is-open .icon-cross {
   display: block;
 }
 
-.mobile-menu__close {
-  padding: 11px;
-  position: absolute;
-  right: 8px;
-  top: 11px;
-  border: 0;
-  background-color: white;
-}
-.mobile-menu__close:hover, .mobile-menu__close:focus {
-  fill: var(--accent-color);
+.header__button.is-open .icon-menu {
+  display: none;
 }
 
-.mobile-menu__icon {
-  display: block;
-}
-
-.mobile-menu {
-  z-index: 1;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  max-width: 480px;
-  height: 796px;
-  background-color: white;
-  visibility: visible;
-}
-
-.mobile-menu.is-open {
+.header__wrap {
   visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.header__wrap.is-open {
+  visibility: visible;
   pointer-events: auto;
 }
 
-.mobile-menu__container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-left: 40px;
-  width: 480px;
-  height: 100%;
-  background-color: white;
+.header__icon {
+  width: 24px;
+  height: 16px;
+  transition: fill var(--animation-main);
+}
+.header__icon:hover, .header__icon:focus {
+  fill: var(--accent-color);
 }
 
-.mobile-nav {
-  padding-top: 48px;
+.navigation {
+  padding: 48px 40px;
 }
-.mobile-nav__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-}
-.mobile-nav__list .mobile-nav__actual {
-  color: var(--accent-color);
-}
-.mobile-nav__item:last-child {
-  margin-bottom: 302px;
-}
-.mobile-nav__link {
-  display: block;
+.navigation__item {
   margin-bottom: 32px;
-  color: var(--first-text-color);
-  text-decoration: none;
+}
+
+.navigation__item:last-child {
+  margin-bottom: 200px;
+}
+
+.navigation__link {
+  position: relative;
+  display: block;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--fist-text-color);
   transition: color var(--animation-main);
 }
-.mobile-nav__link:hover, .mobile-nav__link:focus {
+.navigation__link:hover, .navigation__link:focus {
   color: var(--accent-color);
-  transition: color var(--animation-main);
+}
+.navigation__link--activ {
+  color: var(--accent-color);
 }
 
-.mobile-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.mobile-list__item {
+.contacts__item:not(:last-child) {
   margin-bottom: 32px;
 }
-.mobile-list__item:last-child {
-  margin-bottom: 64px;
-}
-.mobile-list__link {
-  color: var(--second-text-color);
-  text-decoration: none;
-  margin-bottom: 32px;
+.contacts__link {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--fist-text-color);
   transition: color var(--animation-main);
 }
-.mobile-list__link:hover, .mobile-list__link:focus {
-  color: var(--accent-color);
-}
-
-.number {
+.contacts .contacts__link-blue {
   font-size: 34px;
   color: var(--accent-color);
 }
-
-.mail {
-  font-size: 24px;
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--accent-color);
+}
+.contacts__icon {
+  display: none;
 }
 
-.mobile-social__list {
+.header__social {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  margin-top: 64px;
 }
-.mobile-social__item {
-  margin-right: 10px;
-}
-.mobile-social__item:not(:last-child)::after {
+
+.header__item:not(:last-child):after {
   content: "";
-  top: 0;
-  left: 0;
+  background-color: rgba(33, 33, 33, 0.2);
   margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   width: 22px;
-  height: 0;
+  height: 0px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
 }
-.mobile-social__link {
+
+.header__link {
+  color: var(--accent-color);
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   letter-spacing: 0.02em;
-  color: var(--accent-color);
-  text-decoration: none;
 }
 
 /* Стили для логотипа */
