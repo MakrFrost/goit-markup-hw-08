@@ -65,7 +65,7 @@
   padding: 11px;
 
   position: absolute;
-  right: 15px;
+  right: 8px;
   top: 11px;
   border: 0;
   background-color: white;
@@ -81,6 +81,7 @@
 
 // Мобильное меню
 .mobile-menu {
+  z-index: 1;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -224,11 +225,6 @@
 .mobile-nav__link {
 }
 .mobile-nav__actual {
-}
-
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 1200px) {
 }
 
 // .header {

@@ -101,7 +101,7 @@ body {
 .mobile-menu__close {
   padding: 11px;
   position: absolute;
-  right: 15px;
+  right: 8px;
   top: 11px;
   border: 0;
   background-color: white;
@@ -115,6 +115,7 @@ body {
 }
 
 .mobile-menu {
+  z-index: 1;
   position: fixed;
   top: 0px;
   left: 0px;

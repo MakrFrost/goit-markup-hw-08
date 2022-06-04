@@ -1,8 +1,9 @@
+// Переменные
 @import './utils/variables';
-
+// Контейнер
 @import './base/body';
 @import './base/container';
-
+// Секции страницы
 @import './components/header';
 @import './components/hero';
 @import './components/feature';
@@ -12,7 +13,9 @@
 @import './components/footer';
 @import './components/backdrop';
 @import './components/modal';
-
+// Страница портфолио
 @import './pages/portfolio';
 @import './components/filtres';
 @import './components/cards';
+// Адаптив
+@import './utils/media';
