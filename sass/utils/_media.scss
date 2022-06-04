@@ -8,15 +8,14 @@
   .feature-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: calc(-1 * var(--gap-card));
+    margin-right: -30px;
+    width: 50%;
     &__item {
-      width: 354px;
-      flex-basis: calc(50% - var(--gap-card));
       &:not(:last-child) {
-        margin-right: var(--gap-card);
+        margin-right: 30px;
       }
       &::before {
-        width: 354px;
+        width: 100%;
       }
     }
   }
@@ -29,19 +28,4 @@
   }
 
   //   Адаптив секции feature
-  .feature-list {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-right: calc(-1 * var(--gap-card));
-    &__item {
-      width: 270px;
-      flex-basis: calc(25% - var(--gap-card));
-      &:not(:last-child) {
-        margin-right: var(--gap-card);
-      }
-      &::before {
-        width: 270px;
-      }
-    }
-  }
 }

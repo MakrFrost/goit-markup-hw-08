@@ -1029,37 +1029,18 @@ a {
   .feature-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: calc(-1 * var(--gap-card));
-  }
-  .feature-list__item {
-    width: 354px;
-    flex-basis: calc(50% - var(--gap-card));
+    margin-right: -30px;
+    width: 50%;
   }
   .feature-list__item:not(:last-child) {
-    margin-right: var(--gap-card);
+    margin-right: 30px;
   }
   .feature-list__item::before {
-    width: 354px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .header {
     background-color: teal;
-  }
-
-  .feature-list {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-right: calc(-1 * var(--gap-card));
-  }
-  .feature-list__item {
-    width: 270px;
-    flex-basis: calc(25% - var(--gap-card));
-  }
-  .feature-list__item:not(:last-child) {
-    margin-right: var(--gap-card);
-  }
-  .feature-list__item::before {
-    width: 270px;
   }
 }/*# sourceMappingURL=main.css.map */
