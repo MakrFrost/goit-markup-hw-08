@@ -120,11 +120,9 @@ a {
 .navigation__item {
   margin-bottom: 32px;
 }
-
 .navigation__item:last-child {
   margin-bottom: 200px;
 }
-
 .navigation__link {
   position: relative;
   display: block;
