@@ -260,6 +260,9 @@
     .contacts {
       margin-right: 0;
       flex-direction: row;
+      &__link {
+        font-size: 14px;
+      }
       &__item {
         &:last-child {
           margin-bottom: 0;

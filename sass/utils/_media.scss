@@ -2,6 +2,18 @@
 }
 
 @media screen and (min-width: 1201px) {
+  .work-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: calc(-1 * var(--gap-card));
+    margin-left: calc(-1 * var(--gap-card));
+    &__item {
+      flex-basis: calc(100% / 3 - var(--gap-card));
+      margin-top: var(--gap-card);
+      margin-left: var(--gap-card);
+    }
+  }
 }
 
 //  .feature-list {

@@ -44,7 +44,7 @@ a {
 
 @media screen and (min-width: 1200px) {
   .container {
-    padding: 0 215px;
+    padding: 0 200px;
   }
 }
 /* Добавляет стили для хедера*/
@@ -271,6 +271,9 @@ a {
   .header .contacts {
     margin-right: 0;
     flex-direction: row;
+  }
+  .header .contacts__link {
+    font-size: 14px;
   }
   .header .contacts__item:last-child {
     margin-bottom: 0;
@@ -1194,4 +1197,18 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Край блока карточек *//*# sourceMappingURL=main.css.map */
+/* Край блока карточек */
+@media screen and (min-width: 1201px) {
+  .work-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: calc(-1 * var(--gap-card));
+    margin-left: calc(-1 * var(--gap-card));
+  }
+  .work-list__item {
+    flex-basis: calc(33.3333333333% - var(--gap-card));
+    margin-top: var(--gap-card);
+    margin-left: var(--gap-card);
+  }
+}/*# sourceMappingURL=main.css.map */
