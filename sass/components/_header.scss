@@ -14,6 +14,16 @@
     border: none;
   }
 
+  &__icon {
+    width: 24px;
+    height: 16px;
+    transition: fill var(--animation-main);
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
   &__wrap {
     visibility: hidden;
     pointer-events: none;
@@ -27,16 +37,6 @@
     &.is-open {
       visibility: visible;
       pointer-events: auto;
-    }
-  }
-
-  &__icon {
-    width: 24px;
-    height: 16px;
-    transition: fill var(--animation-main);
-    &:hover,
-    &:focus {
-      fill: var(--accent-color);
     }
   }
 
@@ -81,9 +81,11 @@
   display: block;
   font-family: 'Raleway', sans-serif;
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.16;
   text-decoration: none;
+
+  color: var(--color-black);
 
   padding: 16px 0;
 
@@ -241,13 +243,13 @@
 
 // margin-right: 93px;
 
-//   color: var(--color-black);
+// color: var(--color-black);
 
-//   font-family: 'Raleway', sans-serif;
-//   text-decoration: none;
-//   font-weight: 700;
-//   font-size: 26px;
-//   line-height: 1.2;
+// font-family: 'Raleway', sans-serif;
+// text-decoration: none;
+// font-weight: 700;
+// font-size: 26px;
+// line-height: 1.2;
 
 //   &-second {
 //     color: var(--accent-color);

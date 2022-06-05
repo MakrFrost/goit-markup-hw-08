@@ -1,31 +1,108 @@
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   // Адаптив хедера
   .header {
-    background-color: tomato;
-  }
-
-  //   Адаптив секции feature
-  .feature-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -30px;
-    width: 50%;
-    &__item {
-      &:not(:last-child) {
-        margin-right: 30px;
+    &__button {
+      display: none;
+    }
+    &__wrap {
+      visibility: visible;
+      pointer-events: auto;
+      position: relative;
+      margin-left: 88px;
+    }
+    &__social {
+      display: none;
+    }
+    .navigation {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__list {
+        display: flex;
       }
-      &::before {
-        width: 100%;
+      &__item {
+        margin: 0;
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &__link {
+        font-size: 14px;
+        padding: 28px 0;
+
+        &--activ::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 4px;
+          width: 100%;
+          background-color: var(--accent-color);
+          border-radius: 2px;
+        }
+      }
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: 10px;
+      &__item:last-child {
+        margin-bottom: 10px;
+      }
+      &__item:not(:last-child) {
+        margin-bottom: 0;
+      }
+      &__link {
+        display: flex;
+        font-size: 12px;
+        color: var(--second-text-color);
+      }
+      &__link-blue {
+        color: var(--second-text-color);
+      }
+      &__icon {
+        display: block;
+        margin-right: 8px;
       }
     }
   }
 }
+//   //   Адаптив секции feature
+//   .feature-list {
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-right: -30px;
+//     width: 50%;
+//     &__item {
+//       &:not(:last-child) {
+//         margin-right: 30px;
+//       }
+//       &::before {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1201px) {
   // Адаптив хедера
   .header {
-    background-color: teal;
+    .contacts {
+      margin-right: 0;
+      flex-direction: row;
+      &__item {
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+    //   Адаптив секции feature
   }
-
-  //   Адаптив секции feature
 }
