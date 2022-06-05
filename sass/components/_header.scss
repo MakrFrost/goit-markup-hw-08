@@ -169,140 +169,105 @@
   }
 }
 
-// .header {
-//   border-bottom: 1px solid #ececec;
-// }
+// Adaptive
+@media screen and (min-width: 481px) {
+  .header {
+    &__button {
+      display: none;
+    }
+    &__wrap {
+      visibility: visible;
+      pointer-events: auto;
+      position: relative;
+      margin-left: 88px;
+    }
+    &__social {
+      display: none;
+    }
+    .navigation {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__list {
+        display: flex;
+      }
+      &__item {
+        margin: 0;
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &__link {
+        font-size: 14px;
+        padding: 28px 0;
 
-// /* Начало блока навигации */
-
-// .header-nav {
-// display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   &__item {
-// margin-right: 50px;
-//     position: relative;
-
-//     &:last-child {
-// margin-right: 0;
-//     }
-//   }
-
-//   &__link {
-//     display: block;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: var(--first-text-color);
-//     text-decoration: none;
-
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-
-//     transition: color var(--animation-main);
-
-//     &:hover,
-//     &:focus {
-//       color: var(--accent-color);
-//       transition: color var(--animation-main);
-//     }
-//   }
-
-//   &__list {
-//     list-style-type: none;
-//     padding: 0;
-// margin: 0;
-//     justify-content: center;
-// display: flex;
-//   }
-
-//   &__list &__actual {
-//     color: var(--accent-color);
-
-//     &::after {
-//       content: '';
-//       position: absolute;
-//       bottom: 0;
-//       left: 0;
-//       height: 4px;
-//       width: 100%;
-//       background-color: var(--accent-color);
-//       border-radius: 2px;
-//     }
-//   }
-// }
-
-/* Стили для логотипа */
-
-// .header-nav__logo {
-//     display: block;
-//     padding: 16px 0;
-
-// margin-right: 93px;
-
-// color: var(--color-black);
-
-// font-family: 'Raleway', sans-serif;
-// text-decoration: none;
-// font-weight: 700;
-// font-size: 26px;
-// line-height: 1.2;
-
-//   &-second {
-//     color: var(--accent-color);
-//   }
-// }
-
-// /* ^ Край блока навигации ^ */
-
-// /* Блок с адресом и телефоном */
-
-// .header-list {
-//   padding: 0;
-// margin: 0 0 0 auto;
-//   list-style: none;
-// display: flex;
-//   justify-content: end;
-
-//   &__item {
-//     padding-left: auto;
-// margin-right: 50px;
-//   }
-
-//   &__item:last-child {
-// margin-right: 0px;
-//   }
-
-//   /* Иконки */
-
-//   &__icon {
-//     fill: currentColor;
-// margin-right: 10px;
-//   }
-
-//   &__link {
-// display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-
-//     color: var(--second-text-color);
-//     text-decoration: none;
-
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-
-//     transition: color var(--animation-main);
-
-//     &:hover,
-//     &:focus {
-//       color: var(--accent-color);
-//     }
-//   }
-// }
+        &--activ::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 4px;
+          width: 100%;
+          background-color: var(--accent-color);
+          border-radius: 2px;
+        }
+      }
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: 10px;
+      &__item:last-child {
+        margin-bottom: 10px;
+      }
+      &__item:not(:last-child) {
+        margin-bottom: 0;
+      }
+      &__link {
+        display: flex;
+        font-size: 12px;
+        color: var(--second-text-color);
+        &:hover,
+        &:focus {
+          color: var(--accent-color);
+        }
+      }
+      &__link-blue {
+        color: var(--second-text-color);
+      }
+      &__icon {
+        display: block;
+        margin-right: 8px;
+        fill: currentColor;
+        &:hover,
+        &:focus {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1201px) {
+  .header {
+    &__content {
+      padding-right: 200px;
+      padding-left: 200px;
+    }
+    .contacts {
+      margin-right: 0;
+      flex-direction: row;
+      &__item {
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
