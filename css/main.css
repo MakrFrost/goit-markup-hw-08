@@ -1138,9 +1138,4 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Край блока карточек */
-@media screen and (min-width: 1201px) {
-  .work {
-    display: block;
-  }
-}/*# sourceMappingURL=main.css.map */
+/* Край блока карточек *//*# sourceMappingURL=main.css.map */
