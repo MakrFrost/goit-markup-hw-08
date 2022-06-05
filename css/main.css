@@ -324,6 +324,15 @@ a {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1201px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero-title {
+    font-size: 44px;
+  }
+}
 /* Добавляет стили для раздела "особенности" */
 .feature {
   padding-top: 60px;
@@ -1097,4 +1106,13 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Край блока карточек *//*# sourceMappingURL=main.css.map */
+/* Край блока карточек */
+@media screen and (min-width: 1201px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero-title {
+    font-size: 44px;
+  }
+}/*# sourceMappingURL=main.css.map */
