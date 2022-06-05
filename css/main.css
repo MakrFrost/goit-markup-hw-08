@@ -420,10 +420,8 @@ a {
   }
 }
 /* Добавляет стили для раздела "чем занимаемся" */
-/*Добавляет адаптив*/
 .work {
   padding-bottom: 94px;
-  padding-top: 94px;
   background-color: var(--color-white);
   display: none;
 }
@@ -472,6 +470,11 @@ a {
   color: var(--color-white);
 }
 
+@media screen and (min-width: 1201px) {
+  .work {
+    display: block;
+  }
+}
 /* Добавляет стили для раздела "наша команда" */
 .team {
   padding-top: 60px;
@@ -1135,4 +1138,9 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Край блока карточек *//*# sourceMappingURL=main.css.map */
+/* Край блока карточек */
+@media screen and (min-width: 1201px) {
+  .work {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */

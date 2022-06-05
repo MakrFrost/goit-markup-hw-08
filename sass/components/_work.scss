@@ -1,17 +1,7 @@
 /* Добавляет стили для раздела "чем занимаемся" */
 
-/*Добавляет адаптив*/
-
-@media screen and (max-width: 480px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 1200px) {
-}
-
 .work {
   padding-bottom: 94px;
-  padding-top: 94px;
 
   background-color: var(--color-white);
 
@@ -65,5 +55,12 @@
     text-transform: uppercase;
     background: rgba(47, 48, 58, 0.8);
     color: var(--color-white);
+  }
+}
+
+// Adaptive
+@media screen and (min-width: 1201px) {
+  .work {
+    display: block;
   }
 }
