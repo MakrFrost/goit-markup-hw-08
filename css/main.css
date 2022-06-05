@@ -368,8 +368,7 @@ a {
   text-align: center;
 }
 .feature-list__text {
-  margin-bottom: 10px;
-  margin-top: 0;
+  margin: 0;
   color: var(--second-text-color);
   font-size: 14px;
   line-height: 1.7;
@@ -377,6 +376,7 @@ a {
 }
 .feature-list__item {
   width: 100%;
+  margin-bottom: 30px;
   list-style-type: none;
 }
 .feature-list__item::before {
@@ -391,6 +391,34 @@ a {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 481px) {
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: calc(-1 * var(--gap-card));
+    margin-left: calc(-1 * var(--gap-card));
+  }
+  .feature-list__item {
+    flex-basis: calc(50% - var(--gap-card));
+    margin-top: var(--gap-card);
+    margin-left: var(--gap-card);
+  }
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .feature {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
 /* Добавляет стили для раздела "чем занимаемся" */
 /*Добавляет адаптив*/
 .work {
@@ -739,6 +767,7 @@ a {
 .footer-form__input {
   height: 50px;
   width: 100%;
+  max-width: 450px;
   padding: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
