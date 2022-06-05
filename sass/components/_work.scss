@@ -63,4 +63,9 @@
   .work {
     display: block;
   }
+  .work-list {
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }

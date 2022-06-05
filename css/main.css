@@ -42,6 +42,11 @@ a {
   padding: 0 15px;
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 215px;
+  }
+}
 /* Добавляет стили для хедера*/
 .header {
   border-bottom: 1px solid #ececec;
@@ -182,7 +187,7 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .header__button {
     display: none;
   }
@@ -391,7 +396,7 @@ a {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .feature-list {
     display: flex;
     flex-wrap: wrap;
@@ -473,6 +478,10 @@ a {
 @media screen and (min-width: 1201px) {
   .work {
     display: block;
+  }
+
+  .work-list__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 /* Добавляет стили для раздела "наша команда" */
@@ -579,6 +588,34 @@ a {
   margin-right: 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: calc(-1 * var(--gap-card));
+    margin-left: calc(-1 * var(--gap-card));
+  }
+  .team-list__items {
+    flex-basis: calc(50% - var(--gap-card));
+    margin-top: var(--gap-card);
+    margin-left: var(--gap-card);
+  }
+  .team-list__items:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .team-list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
 /* Добавляет стили для секции "Постоянные клиенты" */
 .clients {
   padding-top: 60px;
@@ -598,25 +635,23 @@ a {
 .client-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  align-content: center;
   padding: 0;
   margin-top: calc(-1 * var(--gap-card));
   margin-left: calc(-1 * var(--gap-card));
 }
 .client-list__item {
+  flex-basis: calc(50% - var(--gap-card));
   margin-top: var(--gap-card);
   margin-left: var(--gap-card);
   list-style: none;
-  flex-basis: calc(50% - var(--gap-card));
 }
 .client-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
-  max-width: 210px;
+  width: 100%;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -631,6 +666,27 @@ a {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .client-list__item {
+    flex-basis: calc(33.3333333333% - var(--gap-card));
+  }
+  .client-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .client-list {
+    flex-wrap: nowrap;
+  }
+  .client-list__link {
+    width: 170px;
+  }
+}
 /* Добавляет стили для тега footer */
 .footer {
   padding-top: 60px;
