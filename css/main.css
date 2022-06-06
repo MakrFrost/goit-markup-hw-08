@@ -479,7 +479,7 @@ a {
   color: var(--color-white);
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
   .work {
     display: block;
   }
@@ -605,7 +605,7 @@ a {
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
