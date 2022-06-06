@@ -262,7 +262,7 @@ a {
     fill: currentColor;
   }
 }
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
   .header__content {
     padding-right: 200px;
     padding-left: 200px;
@@ -331,7 +331,7 @@ a {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
