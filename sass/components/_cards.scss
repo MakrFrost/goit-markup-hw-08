@@ -1,9 +1,5 @@
 /* Добавляет элементы для раздела "работы" */
 .cards-list {
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-
   &__item {
     list-style-type: none;
     &:not(:last-child) {
@@ -103,7 +99,26 @@
 
 // Adaptive
 @media screen and (min-width: 768px) {
+  .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--gap-card));
+    margin-left: calc(-1 * var(--gap-card));
+    &__item {
+      flex-basis: calc(100% / 2 - var(--gap-card));
+      margin-top: var(--gap-card);
+      margin-left: var(--gap-card);
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .cards-list {
+    &__item {
+      flex-basis: calc(100% / 3 - var(--gap-card));
+    }
+  }
 }

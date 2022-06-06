@@ -1174,11 +1174,6 @@ a {
   }
 }
 /* Добавляет элементы для раздела "работы" */
-.cards-list {
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-}
 .cards-list__item {
   list-style-type: none;
 }
@@ -1248,4 +1243,25 @@ a {
   letter-spacing: 0.03em;
 }
 
-/* Край блока карточек *//*# sourceMappingURL=main.css.map */
+/* Край блока карточек */
+@media screen and (min-width: 768px) {
+  .cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--gap-card));
+    margin-left: calc(-1 * var(--gap-card));
+  }
+  .cards-list__item {
+    flex-basis: calc(50% - var(--gap-card));
+    margin-top: var(--gap-card);
+    margin-left: var(--gap-card);
+  }
+  .cards-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards-list__item {
+    flex-basis: calc(33.3333333333% - var(--gap-card));
+  }
+}/*# sourceMappingURL=main.css.map */
