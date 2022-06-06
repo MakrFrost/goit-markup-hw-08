@@ -23,29 +23,32 @@
 
 .work-list {
   display: flex;
-  padding: 0px;
-  margin: 0;
   justify-content: space-between;
 
   &__item {
     list-style-type: none;
+    margin-right: var(--gap-card);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__wrap {
+    position: relative;
+    // max-height: 294px;
   }
   &__img {
-    position: relative;
-    max-height: 294px;
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 370px;
   }
   &__text {
     position: absolute;
     bottom: 0;
-    left: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 370px;
+    width: 100%;
     height: 70px;
     margin: 0;
 
@@ -62,10 +65,5 @@
 @media screen and (min-width: 1201px) {
   .work {
     display: block;
-  }
-  .work-list {
-    &__item:not(:last-child) {
-      margin-right: 30px;
-    }
   }
 }

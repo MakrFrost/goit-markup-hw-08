@@ -206,7 +206,7 @@
 
   &__button {
     margin: 0;
-    padding: 10px 0px;
+    padding: 10px 28px;
 
     height: 50px;
     width: 200px;
@@ -241,9 +241,40 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
+  .table-flex {
+    display: flex;
+    align-items: baseline;
+    .container-footer {
+      margin-right: 165px;
+    }
+  }
 }
-@media screen and (max-width: 1200px) {
+
+@media screen and (min-width: 1201px) {
+  .footer-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .footer-social {
+    margin-right: 94px;
+    padding: 0;
+  }
+  .footer-form {
+    margin: 0;
+    &__flex {
+      display: flex;
+      align-items: center;
+    }
+    &__title {
+      margin-right: 350px;
+    }
+    &__input {
+      width: 358px;
+      margin-right: 12px;
+    }
+  }
 }
 
 // .footer {
