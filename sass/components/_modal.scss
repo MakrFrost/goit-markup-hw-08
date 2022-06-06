@@ -5,8 +5,9 @@
   top: 55%;
   left: 50%;
 
+  max-width: 450px;
   width: 100%;
-  height: 609px;
+
   padding: 40px;
 
   background-color: #fff;
@@ -243,7 +244,23 @@
 
 // Adaptive
 @media screen and (min-width: 769px) {
+  .modal-form__check {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1201px) {
+  .modal {
+    max-width: 528px;
+    width: 100%;
+    &-form__check {
+      font-size: 14px;
+    }
+    &-form__link {
+      font-size: 14px;
+    }
+  }
 }
