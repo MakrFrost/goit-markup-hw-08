@@ -32,3 +32,19 @@ margin-left: var(--gap-card);
 margin-bottom: 0;
 }
 }
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: calc(-1 * var(--gap-card));
+  margin-left: calc(-1 * var(--gap-card));
+}
+
+&__item {
+  flex-basis: calc(100% / 2 - var(--gap-card));
+  margin-top: var(--gap-card);
+  margin-left: var(--gap-card);
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
