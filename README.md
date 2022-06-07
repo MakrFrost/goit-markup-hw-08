@@ -3,7 +3,7 @@ https://makrfrost.github.io/goit-markup-hw-08/
 
 Игорёха, это АД
 
-```html
+``` html
 <!--  Для рассчёта карточек в ряд (для адаптива и не только) -->
 :root{
 --gap-card: 30px
