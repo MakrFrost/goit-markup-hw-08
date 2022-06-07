@@ -78,6 +78,7 @@ a {
   background-color: var(--color-white);
 }
 .header__wrap.is-open {
+  z-index: 1;
   visibility: visible;
   pointer-events: auto;
 }

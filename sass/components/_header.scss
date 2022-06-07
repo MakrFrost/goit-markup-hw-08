@@ -34,6 +34,8 @@
     background-color: var(--color-white);
 
     &.is-open {
+      z-index: 1;
+
       visibility: visible;
       pointer-events: auto;
     }
