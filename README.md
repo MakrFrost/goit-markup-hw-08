@@ -9,21 +9,26 @@ https://makrfrost.github.io/goit-markup-hw-08/
 }
 
 
-//  Список-list {
+<!-- Список -->
+&-list {
 <!-- Ставит в ряд -->
-// display: flex;
-// flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
 <!-- Центрирует -->
-// justify-content: center;
+justify-content: center;
 <!-- Задает отрицательный марджин -->
-// margin-top: calc(-1 * var(--gap-card));
-// margin-left: calc(-1 * var(--gap-card));
-
-//    Карточка__item {
+margin-top: calc(-1 * var(--gap-card));
+margin-left: calc(-1 * var(--gap-card));
+}
+----------------------------------------
+<!-- Карточка -->
+&__item {
 <!-- Задает количество карточеку в ряду, зависимо от того сколько их там нужно -->
-// flex-basis: calc(100% / 2 - var(--gap-card));
-// margin-top: var(--gap-card);
-// margin-left: var(--gap-card);
+flex-basis: calc(100% / 2 - var(--gap-card));
+margin-top: var(--gap-card);
+margin-left: var(--gap-card);
 <!-- Убирает ненужное -->
-// &:not(:last-child) {
-//   margin-bottom: 0;
+&:not(:last-child) {
+margin-bottom: 0;
+}
+}
