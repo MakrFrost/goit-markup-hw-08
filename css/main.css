@@ -934,6 +934,7 @@ a {
 /* Добавляет стили для cкрытия модального окна */
 .backdrop {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 100%;
@@ -1019,6 +1020,10 @@ a {
 }
 .modal-send:hover, .modal-send:active {
   background-color: var(--button-hover);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 /* Добавляет стили для формы в модальном окне */
