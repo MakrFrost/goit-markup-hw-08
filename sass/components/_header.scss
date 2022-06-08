@@ -1,17 +1,34 @@
 /* Добавляет стили для хедера*/
-
 .header {
   border-bottom: 1px solid #ececec;
 
-  // Стили для кнопки
+  &__content {
+    position: relative;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__button {
     position: relative;
-    z-index: 100;
+    z-index: 999;
     display: inline-flex;
     margin: 0;
     padding: 0;
     background-color: transparent;
     border: none;
+    & .icon-cross {
+      display: none;
+    }
+
+    &.is-open .icon-cross {
+      display: block;
+    }
+
+    &.is-open .icon-menu {
+      display: none;
+    }
   }
 
   &__icon {
@@ -24,29 +41,26 @@
     }
   }
 
-  &__wrap {
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    background-color: var(--color-white);
-
-    &.is-open {
-      z-index: 1;
-
-      visibility: visible;
-      pointer-events: auto;
-    }
-  }
-
   &__social {
     display: flex;
     flex-wrap: wrap;
     margin-top: 64px;
   }
 
+  &__item {
+    margin-bottom: 10px;
+    &:not(:last-child):after {
+      content: '';
+
+      background-color: rgba(33, 33, 33, 0.2);
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 22px;
+      height: 0px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      transform: rotate(90deg);
+    }
+  }
   &__link {
     color: var(--accent-color);
     font-weight: 500;
@@ -54,70 +68,50 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
   }
-
-  &__content {
-    position: relative;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__item:not(:last-child):after {
-    content: '';
-
-    background-color: rgba(33, 33, 33, 0.2);
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    width: 22px;
-    height: 0px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    transform: rotate(90deg);
-  }
 }
 
-// Стили для логотипа
+// Мобильное меню
+
 .logo {
   display: block;
   font-family: 'Raleway', sans-serif;
-  color: var(--text-color);
-  font-size: 26px;
+  color: var(--first-text-color);
+  font-size: 24px;
   line-height: 1.16;
-  text-decoration: none;
-
-  color: var(--color-black);
 
   padding: 16px 0;
-
   &__text {
     color: var(--accent-color);
   }
 }
 
-.header__button .icon-cross {
-  display: none;
-}
-
-.header__button.is-open .icon-cross {
-  display: block;
-}
-
-.header__button.is-open .icon-menu {
-  display: none;
-}
-
-// Стили для навигации
 .navigation {
+  visibility: hidden;
+
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+
   padding: 48px 40px;
 
-  &__item {
-    margin-bottom: 32px;
-    &:last-child {
-      margin-bottom: 200px;
-    }
+  &.is-open {
+    visibility: visible;
+    pointer-events: auto;
   }
 
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
   &__link {
     position: relative;
     display: block;
@@ -126,21 +120,20 @@
     font-size: 40px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--fist-text-color);
+    color: var(--first-text-color);
     transition: color var(--animation-main);
     &:hover,
     &:focus {
       color: var(--accent-color);
     }
-
     &--activ {
       color: var(--accent-color);
     }
   }
 }
 
-// Стили для контактов
 .contacts {
+  margin-top: auto;
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -150,19 +143,19 @@
     font-size: 24px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--fist-text-color);
+    color: var(--text-color);
 
     transition: color var(--animation-main);
   }
 
-  &__link-blue {
+  .contacts__link-blue {
     font-size: 34px;
     color: var(--accent-color);
   }
-
   &__link:hover,
   &__link:focus {
     color: var(--accent-color);
+    fill: currentColor;
   }
 
   &__icon {
@@ -176,12 +169,6 @@
     &__button {
       display: none;
     }
-    &__wrap {
-      visibility: visible;
-      pointer-events: auto;
-      position: relative;
-      margin-left: 88px;
-    }
     &__social {
       display: none;
     }
@@ -190,6 +177,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      visibility: visible;
+      pointer-events: auto;
+      position: relative;
+      margin-left: 88px;
+      align-items: center;
+      flex-direction: row;
       &__list {
         display: flex;
       }
@@ -221,7 +214,8 @@
     .contacts {
       display: flex;
       flex-direction: column-reverse;
-      margin-left: 10px;
+      margin-left: 0;
+      margin-top: 0;
       &__item:last-child {
         margin-bottom: 10px;
       }

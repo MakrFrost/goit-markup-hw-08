@@ -62,14 +62,30 @@ a {
 .header {
   border-bottom: 1px solid #ececec;
 }
+.header__content {
+  position: relative;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .header__button {
   position: relative;
-  z-index: 100;
+  z-index: 999;
   display: inline-flex;
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
+}
+.header__button .icon-cross {
+  display: none;
+}
+.header__button.is-open .icon-cross {
+  display: block;
+}
+.header__button.is-open .icon-menu {
+  display: none;
 }
 .header__icon {
   width: 24px;
@@ -79,24 +95,23 @@ a {
 .header__icon:hover, .header__icon:focus {
   fill: var(--accent-color);
 }
-.header__wrap {
-  visibility: hidden;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  background-color: var(--color-white);
-}
-.header__wrap.is-open {
-  z-index: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
 .header__social {
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;
+}
+.header__item {
+  margin-bottom: 10px;
+}
+.header__item:not(:last-child):after {
+  content: "";
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 22px;
+  height: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
 }
 .header__link {
   color: var(--accent-color);
@@ -105,59 +120,39 @@ a {
   line-height: 1.22;
   letter-spacing: 0.02em;
 }
-.header__content {
-  position: relative;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header__item:not(:last-child):after {
-  content: "";
-  background-color: rgba(33, 33, 33, 0.2);
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  width: 22px;
-  height: 0px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
-}
 
 .logo {
   display: block;
   font-family: "Raleway", sans-serif;
-  color: var(--text-color);
-  font-size: 26px;
+  color: var(--first-text-color);
+  font-size: 24px;
   line-height: 1.16;
-  text-decoration: none;
-  color: var(--color-black);
   padding: 16px 0;
 }
 .logo__text {
   color: var(--accent-color);
 }
 
-.header__button .icon-cross {
-  display: none;
-}
-
-.header__button.is-open .icon-cross {
-  display: block;
-}
-
-.header__button.is-open .icon-menu {
-  display: none;
-}
-
 .navigation {
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
   padding: 48px 40px;
 }
-.navigation__item {
-  margin-bottom: 32px;
+.navigation.is-open {
+  visibility: visible;
+  pointer-events: auto;
 }
-.navigation__item:last-child {
-  margin-bottom: 200px;
+.navigation__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 .navigation__link {
   position: relative;
@@ -166,7 +161,7 @@ a {
   font-size: 40px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--fist-text-color);
+  color: var(--first-text-color);
   transition: color var(--animation-main);
 }
 .navigation__link:hover, .navigation__link:focus {
@@ -176,6 +171,9 @@ a {
   color: var(--accent-color);
 }
 
+.contacts {
+  margin-top: auto;
+}
 .contacts__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -184,15 +182,16 @@ a {
   font-size: 24px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--fist-text-color);
+  color: var(--text-color);
   transition: color var(--animation-main);
 }
-.contacts__link-blue {
+.contacts .contacts__link-blue {
   font-size: 34px;
   color: var(--accent-color);
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
+  fill: currentColor;
 }
 .contacts__icon {
   display: none;
@@ -202,12 +201,6 @@ a {
   .header__button {
     display: none;
   }
-  .header__wrap {
-    visibility: visible;
-    pointer-events: auto;
-    position: relative;
-    margin-left: 88px;
-  }
   .header__social {
     display: none;
   }
@@ -216,6 +209,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+    margin-left: 88px;
+    align-items: center;
+    flex-direction: row;
   }
   .header .navigation__list {
     display: flex;
@@ -246,7 +245,8 @@ a {
   .header .contacts {
     display: flex;
     flex-direction: column-reverse;
-    margin-left: 10px;
+    margin-left: 0;
+    margin-top: 0;
   }
   .header .contacts__item:last-child {
     margin-bottom: 10px;
