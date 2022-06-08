@@ -1231,6 +1231,7 @@ body.modal-open {
 }
 .cards-list__img {
   display: block;
+  height: 100%;
   width: 100%;
 }
 .cards-list__overlay {
@@ -1296,6 +1297,9 @@ body.modal-open {
   }
   .cards-list__item:not(:last-child) {
     margin-bottom: 0;
+  }
+  .cards-list__box:first-child {
+    height: 146px;
   }
 }
 @media screen and (min-width: 1200px) {
