@@ -1,19 +1,38 @@
 /* Ограничивающий контейнер */
+
+// .container {
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 15px;
+// }
+
+// // @media screen and (min-width: 481px) {
+
+// // }
+// // @media screen and (min-width: 769px) {
+
+// // }
+
+// @media screen and (min-width: 1200px) {
+//   .container {
+//     padding: 0 200px;
+//   }
+// }
+
 .container {
-  width: 100%;
+  padding: 0px 15px;
   margin: 0 auto;
-  padding: 0 15px;
-}
+  width: 100%;
+  outline: 2px solid red;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 
-// @media screen and (min-width: 481px) {
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 
-// }
-// @media screen and (min-width: 769px) {
-
-// }
-
-@media screen and (min-width: 1200px) {
-  .container {
-    padding: 0 200px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }

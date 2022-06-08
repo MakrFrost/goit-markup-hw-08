@@ -31,7 +31,7 @@
   padding: 0;
   margin: 0;
   font-size: 26px;
-  line-height: 42px;
+  line-height: 2.2;
 }
 
 .button {
@@ -83,6 +83,7 @@
       url(../images/index/hero-desktop.jpg);
     &-title {
       font-size: 44px;
+      line-height: 1.2;
     }
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
