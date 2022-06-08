@@ -8,9 +8,6 @@
 }
 
 .feature-list {
-  margin: 0;
-  padding-left: 0px;
-
   &__antenna::before {
     background-image: url(../images/index/antenna.png);
   }
@@ -49,7 +46,6 @@
 
   &__item {
     width: 100%;
-    margin-bottom: 30px;
     list-style-type: none;
 
     &::before {
@@ -62,6 +58,9 @@
       width: 100%;
       height: 120px;
       margin-bottom: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: var(--gap-card);
     }
   }
 }
@@ -80,7 +79,7 @@
       margin-top: var(--gap-card);
       margin-left: var(--gap-card);
       &:not(:last-child) {
-        margin-bottom: 0;
+        margin-bottom: var(--gap-card);
       }
     }
   }
@@ -93,5 +92,10 @@
   .feature-list {
     display: flex;
     flex-wrap: nowrap;
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
   }
 }

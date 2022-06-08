@@ -381,10 +381,6 @@ a {
   background-color: var(--color-white);
 }
 
-.feature-list {
-  margin: 0;
-  padding-left: 0px;
-}
 .feature-list__antenna::before {
   background-image: url(../images/index/antenna.png);
 }
@@ -417,7 +413,6 @@ a {
 }
 .feature-list__item {
   width: 100%;
-  margin-bottom: 30px;
   list-style-type: none;
 }
 .feature-list__item::before {
@@ -430,6 +425,9 @@ a {
   width: 100%;
   height: 120px;
   margin-bottom: 30px;
+}
+.feature-list__item:not(:last-child) {
+  margin-bottom: var(--gap-card);
 }
 
 @media screen and (min-width: 768px) {
@@ -446,7 +444,7 @@ a {
     margin-left: var(--gap-card);
   }
   .feature-list__item:not(:last-child) {
-    margin-bottom: 0;
+    margin-bottom: var(--gap-card);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -458,6 +456,9 @@ a {
   .feature-list {
     display: flex;
     flex-wrap: nowrap;
+  }
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 /* Добавляет стили для раздела "чем занимаемся" */
