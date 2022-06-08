@@ -41,6 +41,7 @@
     margin-bottom: 0;
 
     display: block;
+    width: 450px;
     min-width: 100%;
     height: auto;
   }
@@ -136,6 +137,9 @@
     justify-content: center;
     margin-top: calc(-1 * var(--gap-card));
     margin-left: calc(-1 * var(--gap-card));
+    &__img {
+      width: 354px;
+    }
     &__items {
       flex-basis: calc(100% / 2 - var(--gap-card));
       margin-top: var(--gap-card);
@@ -155,5 +159,8 @@
   .team-list {
     display: flex;
     flex-wrap: nowrap;
+    &__img {
+      width: 270px;
+    }
   }
 }

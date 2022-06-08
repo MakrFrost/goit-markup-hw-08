@@ -551,6 +551,7 @@ a {
 .team-list__img {
   margin-bottom: 0;
   display: block;
+  width: 450px;
   min-width: 100%;
   height: auto;
 }
@@ -630,6 +631,9 @@ a {
     margin-top: calc(-1 * var(--gap-card));
     margin-left: calc(-1 * var(--gap-card));
   }
+  .team-list__img {
+    width: 354px;
+  }
   .team-list__items {
     flex-basis: calc(50% - var(--gap-card));
     margin-top: var(--gap-card);
@@ -648,6 +652,9 @@ a {
   .team-list {
     display: flex;
     flex-wrap: nowrap;
+  }
+  .team-list__img {
+    width: 270px;
   }
 }
 /* Добавляет стили для секции "Постоянные клиенты" */
