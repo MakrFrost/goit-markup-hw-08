@@ -275,10 +275,6 @@ a {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__content {
-    padding-right: 200px;
-    padding-left: 200px;
-  }
   .header .contacts {
     margin-right: 0;
     flex-direction: row;
@@ -551,7 +547,7 @@ a {
 .team-list__img {
   margin-bottom: 0;
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .team-list__wrap {
