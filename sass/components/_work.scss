@@ -23,7 +23,6 @@
 
 .work-list {
   display: flex;
-  justify-content: space-between;
 
   &__item {
     list-style-type: none;
@@ -34,7 +33,6 @@
   }
   &__wrap {
     position: relative;
-    // max-height: 294px;
   }
   &__img {
     display: block;
