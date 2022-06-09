@@ -79,7 +79,7 @@
       margin-top: var(--gap-card);
       margin-left: var(--gap-card);
       &:not(:last-child) {
-        margin-bottom: var(--gap-card);
+        margin-bottom: 0;
       }
     }
   }
@@ -92,10 +92,5 @@
   .feature-list {
     display: flex;
     flex-wrap: nowrap;
-    &__item {
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
-    }
   }
 }

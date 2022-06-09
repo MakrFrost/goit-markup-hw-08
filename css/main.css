@@ -40,7 +40,6 @@ a {
   padding: 0px 15px;
   margin: 0 auto;
   width: 100%;
-  outline: 2px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -297,7 +296,7 @@ a {
   background-position: center;
   color: var(--color-white);
   text-align: center;
-  max-width: 100%;
+  max-width: 1600px;
   padding-top: 118px;
   padding-bottom: 118px;
 }
@@ -356,6 +355,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to top, var(--bcg-color-hero), var(--bcg-color-hero)), url(../images/index/hero-desktop.jpg);
@@ -440,7 +440,7 @@ a {
     margin-left: var(--gap-card);
   }
   .feature-list__item:not(:last-child) {
-    margin-bottom: var(--gap-card);
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -452,9 +452,6 @@ a {
   .feature-list {
     display: flex;
     flex-wrap: nowrap;
-  }
-  .feature-list__item:not(:last-child) {
-    margin-bottom: 0;
   }
 }
 /* Добавляет стили для раздела "чем занимаемся" */
@@ -906,7 +903,7 @@ a {
     align-items: baseline;
   }
   .table-flex .container-footer {
-    margin-right: 165px;
+    margin-right: 70px;
   }
   .table-flex .footer-social {
     margin-top: 0;
@@ -924,6 +921,10 @@ a {
     margin-right: 0;
     margin-top: 0;
     padding: 0;
+  }
+
+  .container-footer {
+    text-align: start;
   }
 
   .footer-form {
