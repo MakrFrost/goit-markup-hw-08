@@ -1180,8 +1180,7 @@ body.modal-open {
   margin-bottom: 15px;
   list-style-type: none;
 }
-.filtres-list__item:last-child {
-  margin-right: 0;
+.filtres-list__item:nth-last-child(-n+2) {
   margin-bottom: 0;
 }
 .filtres-list__button {
@@ -1210,16 +1209,22 @@ body.modal-open {
   .filtres-list {
     justify-content: center;
   }
+
+  .filtres-list__item {
+    margin-bottom: 0;
+  }
 }
 /* Добавляет элементы для раздела "работы" */
 .cards-list__item {
+  display: flex;
   list-style-type: none;
 }
 .cards-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
 .cards-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   transition: box-shadow var(--animation-main);
 }
@@ -1264,6 +1269,7 @@ body.modal-open {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 .cards-list__title {
   margin-top: 0px;

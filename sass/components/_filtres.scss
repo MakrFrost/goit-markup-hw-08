@@ -8,7 +8,6 @@
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
   padding-left: 0px;
 
   &__item {
@@ -16,8 +15,7 @@
     margin-bottom: 15px;
     list-style-type: none;
 
-    &:last-child {
-      margin-right: 0;
+    &:nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
   }
@@ -55,5 +53,8 @@
 @media screen and (min-width: 768px) {
   .filtres-list {
     justify-content: center;
+  }
+  .filtres-list__item {
+    margin-bottom: 0;
   }
 }

@@ -1,6 +1,7 @@
 /* Добавляет элементы для раздела "работы" */
 .cards-list {
   &__item {
+    display: flex;
     list-style-type: none;
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -8,7 +9,8 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     transition: box-shadow var(--animation-main);
 
@@ -71,6 +73,8 @@
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+
+    flex-grow: 1;
   }
 
   &__title {
